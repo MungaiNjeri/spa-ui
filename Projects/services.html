@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Touch Spa - Find Your Sanctuary</title>
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
-<!-- Material Symbols -->
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<!-- Tailwind Config -->
-<script id="tailwind-config">
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Touch Spa - Find Your Sanctuary</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Tailwind Config -->
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -38,7 +38,7 @@
             },
         }
     </script>
-<style>
+    <style>
         /* Custom scrollbar for a cleaner look */
         ::-webkit-scrollbar {
             width: 8px;
@@ -56,395 +56,418 @@
     </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-neutral-dark dark:text-white antialiased min-h-screen flex flex-col">
-<!-- Navigation -->
-<header class="sticky top-0 z-50 bg-white/90 dark:bg-card-dark/90 backdrop-blur-md border-b border-[#f0f4f2] dark:border-white/10">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex items-center justify-between h-16">
-<!-- Logo -->
-<div class="flex items-center gap-3">
-<div class="size-8 text-primary">
-<svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-<h2 class="text-neutral-dark dark:text-white text-xl font-bold tracking-tight">Touch Spa</h2>
-</div>
-<!-- Desktop Menu -->
-<div class="hidden md:flex items-center gap-8">
-<a class="text-neutral-dark dark:text-gray-200 text-sm font-semibold hover:text-primary transition-colors" href="#">Home</a>
-<a class="text-primary text-sm font-bold" href="#">Services</a>
-<a class="text-neutral-dark dark:text-gray-200 text-sm font-semibold hover:text-primary transition-colors" href="#">About</a>
-<a class="text-neutral-dark dark:text-gray-200 text-sm font-semibold hover:text-primary transition-colors" href="#">Contact</a>
-</div>
-<!-- User Actions -->
-<div class="flex items-center gap-4">
-<button class="flex items-center justify-center size-10 rounded-xl bg-input-bg dark:bg-white/10 text-neutral-dark dark:text-white hover:bg-primary/20 transition-colors">
-<span class="material-symbols-outlined">person</span>
-</button>
-<button class="md:hidden flex items-center justify-center size-10 rounded-xl bg-input-bg dark:bg-white/10 text-neutral-dark dark:text-white">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
-</div>
-</div>
-</header>
-<!-- Hero / Page Heading -->
-<div class="bg-white dark:bg-card-dark py-8 border-b border-[#f0f4f2] dark:border-white/5">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
-<div class="flex flex-col gap-2">
-<h1 class="text-neutral-dark dark:text-white text-3xl md:text-4xl font-bold leading-tight tracking-tight">Find Your Sanctuary</h1>
-<p class="text-neutral-gray dark:text-gray-400 text-base">Book a trusted therapist for your perfect escape.</p>
-</div>
-<!-- Breadcrumbs or minor info could go here -->
-</div>
-</div>
-</div>
-<!-- Main Layout -->
-<main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
-<div class="flex flex-col lg:flex-row gap-8">
-<!-- Sidebar Filters -->
-<aside class="w-full lg:w-80 shrink-0 space-y-8">
-<!-- Search Filter -->
-<div class="space-y-3">
-<h3 class="font-bold text-lg dark:text-white">Location</h3>
-<label class="flex w-full">
-<div class="relative w-full">
-<div class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none text-neutral-gray">
-<span class="material-symbols-outlined text-xl">location_on</span>
-</div>
-<input class="w-full h-12 rounded-xl bg-input-bg dark:bg-white/5 border-none text-neutral-dark dark:text-white placeholder:text-neutral-gray pl-11 pr-4 focus:ring-2 focus:ring-primary focus:ring-opacity-50 transition-shadow" placeholder="City or Zip Code" value="Nairobi,Kenya"/>
-</div>
-</label>
-</div>
-<hr class="border-[#f0f4f2] dark:border-white/10"/>
-<!-- Categories Filter -->
-<div class="space-y-3">
-<h3 class="font-bold text-lg dark:text-white">Service Type</h3>
-<div class="flex flex-col gap-3">
-<label class="flex items-center gap-3 cursor-pointer group">
-<input checked="" class="size-5 rounded border-2 border-[#dbe6e0] dark:border-white/20 bg-transparent text-primary focus:ring-offset-0 focus:ring-0 checked:bg-primary checked:border-primary transition-colors cursor-pointer" type="checkbox"/>
-<span class="text-neutral-dark dark:text-gray-200 group-hover:text-primary transition-colors">Massage Therapy</span>
-</label>
-<label class="flex items-center gap-3 cursor-pointer group">
-<input class="size-5 rounded border-2 border-[#dbe6e0] dark:border-white/20 bg-transparent text-primary focus:ring-offset-0 focus:ring-0 checked:bg-primary checked:border-primary transition-colors cursor-pointer" type="checkbox"/>
-<span class="text-neutral-dark dark:text-gray-200 group-hover:text-primary transition-colors">Facial Treatments</span>
-</label>
-<label class="flex items-center gap-3 cursor-pointer group">
-<input class="size-5 rounded border-2 border-[#dbe6e0] dark:border-white/20 bg-transparent text-primary focus:ring-offset-0 focus:ring-0 checked:bg-primary checked:border-primary transition-colors cursor-pointer" type="checkbox"/>
-<span class="text-neutral-dark dark:text-gray-200 group-hover:text-primary transition-colors">Body Treatment</span>
-</label>
-<label class="flex items-center gap-3 cursor-pointer group">
-<input class="size-5 rounded border-2 border-[#dbe6e0] dark:border-white/20 bg-transparent text-primary focus:ring-offset-0 focus:ring-0 checked:bg-primary checked:border-primary transition-colors cursor-pointer" type="checkbox"/>
-<span class="text-neutral-dark dark:text-gray-200 group-hover:text-primary transition-colors">Couple's Spa</span>
-</label>
-<label class="flex items-center gap-3 cursor-pointer group">
-<input class="size-5 rounded border-2 border-[#dbe6e0] dark:border-white/20 bg-transparent text-primary focus:ring-offset-0 focus:ring-0 checked:bg-primary checked:border-primary transition-colors cursor-pointer" type="checkbox"/>
-<span class="text-neutral-dark dark:text-gray-200 group-hover:text-primary transition-colors">Aromatherapy</span>
-</label>
-</div>
-</div>
-<hr class="border-[#f0f4f2] dark:border-white/10"/>
-<!-- Price Slider -->
-<div class="space-y-4">
-<div class="flex justify-between items-center">
-<h3 class="font-bold text-lg dark:text-white">Price Range</h3>
-<span class="text-sm font-medium text-neutral-gray">ksh5000 - ksh6000</span>
-</div>
-<!-- Slider Visual -->
-<div class="relative w-full h-8 pt-3">
-<div class="absolute top-1/2 left-0 w-full h-1 bg-[#dbe6e0] dark:bg-white/20 rounded-full"></div>
-<div class="absolute top-1/2 left-[10%] right-[30%] h-1 bg-neutral-dark dark:bg-primary rounded-full"></div>
-<!-- Handle 1 -->
-<div class="absolute top-1/2 -translate-y-1/2 left-[10%] size-5 bg-white border-2 border-neutral-dark dark:border-primary rounded-full shadow cursor-pointer hover:scale-110 transition-transform"></div>
-<!-- Handle 2 -->
-<div class="absolute top-1/2 -translate-y-1/2 right-[30%] size-5 bg-white border-2 border-neutral-dark dark:border-primary rounded-full shadow cursor-pointer hover:scale-110 transition-transform"></div>
-</div>
-</div>
-<hr class="border-[#f0f4f2] dark:border-white/10"/>
-<!-- Rating Filter -->
-<div class="space-y-3">
-<h3 class="font-bold text-lg dark:text-white">Rating</h3>
-<div class="flex flex-col gap-2">
-<label class="flex items-center gap-3 cursor-pointer group">
-<input class="size-4 text-primary bg-transparent border-[#dbe6e0] dark:border-white/20 focus:ring-0 focus:ring-offset-0 cursor-pointer" name="rating" type="radio"/>
-<div class="flex items-center text-[#FCD34D]">
-<span class="material-symbols-outlined text-[20px] fill-current">star</span>
-<span class="material-symbols-outlined text-[20px] fill-current">star</span>
-<span class="material-symbols-outlined text-[20px] fill-current">star</span>
-<span class="material-symbols-outlined text-[20px] fill-current">star</span>
-<span class="material-symbols-outlined text-[20px] fill-current">star</span>
-</div>
-<span class="text-sm text-neutral-dark dark:text-gray-300 ml-auto">4.5+</span>
-</label>
-<label class="flex items-center gap-3 cursor-pointer group">
-<input class="size-4 text-primary bg-transparent border-[#dbe6e0] dark:border-white/20 focus:ring-0 focus:ring-offset-0 cursor-pointer" name="rating" type="radio"/>
-<div class="flex items-center text-[#FCD34D]">
-<span class="material-symbols-outlined text-[20px] fill-current">star</span>
-<span class="material-symbols-outlined text-[20px] fill-current">star</span>
-<span class="material-symbols-outlined text-[20px] fill-current">star</span>
-<span class="material-symbols-outlined text-[20px] fill-current">star</span>
-<span class="material-symbols-outlined text-[20px] text-gray-300 dark:text-gray-600">star</span>
-</div>
-<span class="text-sm text-neutral-dark dark:text-gray-300 ml-auto">4.0+</span>
-</label>
-</div>
-</div>
-</aside>
-<!-- Main Grid Content -->
-<div class="flex-1">
-<!-- Toolbar -->
-<div class="flex flex-wrap items-center justify-between mb-6 gap-4">
-<p class="text-neutral-gray dark:text-gray-400 font-medium">Showing <span class="text-neutral-dark dark:text-white font-bold">12</span> results</p>
-<div class="flex items-center gap-2">
-<span class="text-sm text-neutral-gray dark:text-gray-400">Sort by:</span>
-<div class="relative">
-<select class="appearance-none bg-transparent border-none text-sm font-bold text-neutral-dark dark:text-white pr-8 focus:ring-0 cursor-pointer">
-<option>Recommended</option>
-<option>Price: Low to High</option>
-<option>Rating: High to Low</option>
-</select>
-<span class="material-symbols-outlined absolute right-0 top-1/2 -translate-y-1/2 text-neutral-dark dark:text-white pointer-events-none text-sm">expand_more</span>
-</div>
-</div>
-</div>
-<!-- Cards Grid -->
-<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-<!-- Card 1 -->
-<div class="group bg-white dark:bg-card-dark rounded-2xl p-4 shadow-sm hover:shadow-xl transition-all duration-300 border border-[#f0f4f2] dark:border-white/5 hover:-translate-y-1">
-<div class="relative aspect-[4/3] rounded-xl overflow-hidden mb-4">
-<img alt="Therapist" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Professional female therapist smiling in a spa setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe5eSEmgh7WdgOoYccUycGpsHWQJkgRkzT-vCNWevYPfO0fJgkUFzl056setryKIV26m4QzLujHJvlwFcp1b5mPhFGKfqtGyCpugYaX1mf7ZOwyLwe_D36f9bC9lZpnBYj82BHkdnIk6q-yJ5DG7U-CJ8Nto_dRktPiGu1o4vQtTMnpu9mhC9f2R4fgflcVqevbNfMxNLlN3r24XKescxuh8IBX3y2bdhiuYZEWrOvdGHRV_X-G-xjObwNtm7b2o6f_m51KOYHTKI"/>
-<div class="absolute top-3 right-3 bg-white/90 dark:bg-black/60 backdrop-blur-sm px-2 py-1 rounded-lg flex items-center gap-1 text-xs font-bold text-neutral-dark dark:text-white shadow-sm">
-<span class="material-symbols-outlined text-[14px] text-[#FCD34D] fill-current">star</span>
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-white/90 dark:bg-card-dark/90 backdrop-blur-md border-b border-[#f0f4f2] dark:border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="size-8 text-primary">
+                        <svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-neutral-dark dark:text-white text-xl font-bold tracking-tight">Touch Spa</h2>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a class="text-neutral-dark dark:text-gray-200 text-sm font-semibold hover:text-primary transition-colors" href="index.html">Home</a>
+                    <a class="text-primary text-sm font-bold" href="#">Services</a>
+                    <a class="text-neutral-dark dark:text-gray-200 text-sm font-semibold hover:text-primary transition-colors" href="location.html">Locations</a>
+                    <a class="text-neutral-dark dark:text-gray-200 text-sm font-semibold hover:text-primary transition-colors" href="selectservice.html">Book Service</a>
+                    <a class="text-neutral-dark dark:text-gray-200 text-sm font-semibold hover:text-primary transition-colors" href="professionalprofile.html">Become a Pro</a>
+                </div>
+                <!-- User Actions -->
+                <div class="flex items-center gap-4">
+                    <button class="flex items-center justify-center size-10 rounded-xl bg-input-bg dark:bg-white/10 text-neutral-dark dark:text-white hover:bg-primary/20 transition-colors">
+                        <span class="material-symbols-outlined">person</span>
+                    </button>
+                    <button class="md:hidden flex items-center justify-center size-10 rounded-xl bg-input-bg dark:bg-white/10 text-neutral-dark dark:text-white">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero / Page Heading -->
+    <div class="bg-white dark:bg-card-dark py-8 border-b border-[#f0f4f2] dark:border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Back to Home Button -->
+            <div class="mb-6">
+                <a href="index.html" class="inline-flex items-center text-primary font-bold hover:underline text-sm">
+                    <span class="material-symbols-outlined mr-1">arrow_back</span> Back to Home
+                </a>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+                <div class="flex flex-col gap-2">
+                    <h1 class="text-neutral-dark dark:text-white text-3xl md:text-4xl font-bold leading-tight tracking-tight">Find Your Sanctuary</h1>
+                    <p class="text-neutral-gray dark:text-gray-400 text-base">Book a trusted therapist for your perfect escape.</p>
+                </div>
+                <!-- Breadcrumbs or minor info could go here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Layout -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Sidebar Filters -->
+            <aside class="w-full lg:w-80 shrink-0 space-y-8">
+                <!-- Search Filter -->
+                <div class="space-y-3">
+                    <h3 class="font-bold text-lg dark:text-white">Location</h3>
+                    <label class="flex w-full">
+                        <div class="relative w-full">
+                            <div class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none text-neutral-gray">
+                                <span class="material-symbols-outlined text-xl">location_on</span>
+                            </div>
+                            <input class="w-full h-12 rounded-xl bg-input-bg dark:bg-white/5 border-none text-neutral-dark dark:text-white placeholder:text-neutral-gray pl-11 pr-4 focus:ring-2 focus:ring-primary focus:ring-opacity-50 transition-shadow" placeholder="City or Zip Code" value="Nairobi,Kenya"/>
+                        </div>
+                    </label>
+                </div>
+                <hr class="border-[#f0f4f2] dark:border-white/10"/>
+                
+                <!-- Categories Filter -->
+                <div class="space-y-3">
+                    <h3 class="font-bold text-lg dark:text-white">Service Type</h3>
+                    <div class="flex flex-col gap-3">
+                        <label class="flex items-center gap-3 cursor-pointer group">
+                            <input checked="" class="size-5 rounded border-2 border-[#dbe6e0] dark:border-white/20 bg-transparent text-primary focus:ring-offset-0 focus:ring-0 checked:bg-primary checked:border-primary transition-colors cursor-pointer" type="checkbox"/>
+                            <span class="text-neutral-dark dark:text-gray-200 group-hover:text-primary transition-colors">Massage Therapy</span>
+                        </label>
+                        <label class="flex items-center gap-3 cursor-pointer group">
+                            <input class="size-5 rounded border-2 border-[#dbe6e0] dark:border-white/20 bg-transparent text-primary focus:ring-offset-0 focus:ring-0 checked:bg-primary checked:border-primary transition-colors cursor-pointer" type="checkbox"/>
+                            <span class="text-neutral-dark dark:text-gray-200 group-hover:text-primary transition-colors">Facial Treatments</span>
+                        </label>
+                        <label class="flex items-center gap-3 cursor-pointer group">
+                            <input class="size-5 rounded border-2 border-[#dbe6e0] dark:border-white/20 bg-transparent text-primary focus:ring-offset-0 focus:ring-0 checked:bg-primary checked:border-primary transition-colors cursor-pointer" type="checkbox"/>
+                            <span class="text-neutral-dark dark:text-gray-200 group-hover:text-primary transition-colors">Body Treatment</span>
+                        </label>
+                        <label class="flex items-center gap-3 cursor-pointer group">
+                            <input class="size-5 rounded border-2 border-[#dbe6e0] dark:border-white/20 bg-transparent text-primary focus:ring-offset-0 focus:ring-0 checked:bg-primary checked:border-primary transition-colors cursor-pointer" type="checkbox"/>
+                            <span class="text-neutral-dark dark:text-gray-200 group-hover:text-primary transition-colors">Couple's Spa</span>
+                        </label>
+                        <label class="flex items-center gap-3 cursor-pointer group">
+                            <input class="size-5 rounded border-2 border-[#dbe6e0] dark:border-white/20 bg-transparent text-primary focus:ring-offset-0 focus:ring-0 checked:bg-primary checked:border-primary transition-colors cursor-pointer" type="checkbox"/>
+                            <span class="text-neutral-dark dark:text-gray-200 group-hover:text-primary transition-colors">Aromatherapy</span>
+                        </label>
+                    </div>
+                </div>
+                <hr class="border-[#f0f4f2] dark:border-white/10"/>
+                
+                <!-- Price Slider -->
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-bold text-lg dark:text-white">Price Range</h3>
+                        <span class="text-sm font-medium text-neutral-gray">ksh5000 - ksh6000</span>
+                    </div>
+                    <!-- Slider Visual -->
+                    <div class="relative w-full h-8 pt-3">
+                        <div class="absolute top-1/2 left-0 w-full h-1 bg-[#dbe6e0] dark:bg-white/20 rounded-full"></div>
+                        <div class="absolute top-1/2 left-[10%] right-[30%] h-1 bg-neutral-dark dark:bg-primary rounded-full"></div>
+                        <!-- Handle 1 -->
+                        <div class="absolute top-1/2 -translate-y-1/2 left-[10%] size-5 bg-white border-2 border-neutral-dark dark:border-primary rounded-full shadow cursor-pointer hover:scale-110 transition-transform"></div>
+                        <!-- Handle 2 -->
+                        <div class="absolute top-1/2 -translate-y-1/2 right-[30%] size-5 bg-white border-2 border-neutral-dark dark:border-primary rounded-full shadow cursor-pointer hover:scale-110 transition-transform"></div>
+                    </div>
+                </div>
+                <hr class="border-[#f0f4f2] dark:border-white/10"/>
+                
+                <!-- Rating Filter -->
+                <div class="space-y-3">
+                    <h3 class="font-bold text-lg dark:text-white">Rating</h3>
+                    <div class="flex flex-col gap-2">
+                        <label class="flex items-center gap-3 cursor-pointer group">
+                            <input class="size-4 text-primary bg-transparent border-[#dbe6e0] dark:border-white/20 focus:ring-0 focus:ring-offset-0 cursor-pointer" name="rating" type="radio"/>
+                            <div class="flex items-center text-[#FCD34D]">
+                                <span class="material-symbols-outlined text-[20px] fill-current">star</span>
+                                <span class="material-symbols-outlined text-[20px] fill-current">star</span>
+                                <span class="material-symbols-outlined text-[20px] fill-current">star</span>
+                                <span class="material-symbols-outlined text-[20px] fill-current">star</span>
+                                <span class="material-symbols-outlined text-[20px] fill-current">star</span>
+                            </div>
+                            <span class="text-sm text-neutral-dark dark:text-gray-300 ml-auto">4.5+</span>
+                        </label>
+                        <label class="flex items-center gap-3 cursor-pointer group">
+                            <input class="size-4 text-primary bg-transparent border-[#dbe6e0] dark:border-white/20 focus:ring-0 focus:ring-offset-0 cursor-pointer" name="rating" type="radio"/>
+                            <div class="flex items-center text-[#FCD34D]">
+                                <span class="material-symbols-outlined text-[20px] fill-current">star</span>
+                                <span class="material-symbols-outlined text-[20px] fill-current">star</span>
+                                <span class="material-symbols-outlined text-[20px] fill-current">star</span>
+                                <span class="material-symbols-outlined text-[20px] fill-current">star</span>
+                                <span class="material-symbols-outlined text-[20px] text-gray-300 dark:text-gray-600">star</span>
+                            </div>
+                            <span class="text-sm text-neutral-dark dark:text-gray-300 ml-auto">4.0+</span>
+                        </label>
+                    </div>
+                </div>
+            </aside>
+            
+            <!-- Main Grid Content -->
+            <div class="flex-1">
+                <!-- Toolbar -->
+                <div class="flex flex-wrap items-center justify-between mb-6 gap-4">
+                    <p class="text-neutral-gray dark:text-gray-400 font-medium">Showing <span class="text-neutral-dark dark:text-white font-bold">12</span> results</p>
+                    <div class="flex items-center gap-2">
+                        <span class="text-sm text-neutral-gray dark:text-gray-400">Sort by:</span>
+                        <div class="relative">
+                            <select class="appearance-none bg-transparent border-none text-sm font-bold text-neutral-dark dark:text-white pr-8 focus:ring-0 cursor-pointer">
+                                <option>Recommended</option>
+                                <option>Price: Low to High</option>
+                                <option>Rating: High to Low</option>
+                            </select>
+                            <span class="material-symbols-outlined absolute right-0 top-1/2 -translate-y-1/2 text-neutral-dark dark:text-white pointer-events-none text-sm">expand_more</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                    <!-- Card 1 -->
+                    <div class="group bg-white dark:bg-card-dark rounded-2xl p-4 shadow-sm hover:shadow-xl transition-all duration-300 border border-[#f0f4f2] dark:border-white/5 hover:-translate-y-1">
+                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden mb-4">
+                            <img alt="Therapist" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Professional female therapist smiling in a spa setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe5eSEmgh7WdgOoYccUycGpsHWQJkgRkzT-vCNWevYPfO0fJgkUFzl056setryKIV26m4QzLujHJvlwFcp1b5mPhFGKfqtGyCpugYaX1mf7ZOwyLwe_D36f9bC9lZpnBYj82BHkdnIk6q-yJ5DG7U-CJ8Nto_dRktPiGu1o4vQtTMnpu9mhC9f2R4fgflcVqevbNfMxNLlN3r24XKescxuh8IBX3y2bdhiuYZEWrOvdGHRV_X-G-xjObwNtm7b2o6f_m51KOYHTKI"/>
+                            <div class="absolute top-3 right-3 bg-white/90 dark:bg-black/60 backdrop-blur-sm px-2 py-1 rounded-lg flex items-center gap-1 text-xs font-bold text-neutral-dark dark:text-white shadow-sm">
+                                <span class="material-symbols-outlined text-[14px] text-[#FCD34D] fill-current">star</span>
                                 4.9 (124)
                             </div>
-</div>
-<div class="space-y-3">
-<div>
-<h3 class="text-lg font-bold text-neutral-dark dark:text-white leading-tight">Sarah Martin</h3>
-<p class="text-sm text-neutral-gray dark:text-gray-400">Deep Tissue Specialist</p>
-</div>
-<div class="flex items-center gap-2 text-xs font-medium text-neutral-dark dark:text-gray-300 bg-background-light dark:bg-white/5 p-2 rounded-lg w-fit">
-<span class="material-symbols-outlined text-[16px]">schedule</span> 60 min
-                                <span class="w-px h-3 bg-gray-300 dark:bg-white/20 mx-1"></span>
-<span class="material-symbols-outlined text-[16px]">spa</span> Massage
+                        </div>
+                        <div class="space-y-3">
+                            <div>
+                                <h3 class="text-lg font-bold text-neutral-dark dark:text-white leading-tight">Sarah Martin</h3>
+                                <p class="text-sm text-neutral-gray dark:text-gray-400">Deep Tissue Specialist</p>
                             </div>
-<div class="flex items-center justify-between pt-2">
-<p class="text-lg font-bold text-neutral-dark dark:text-white">ksh900</p>
-<button class="bg-primary hover:bg-primary-hover text-neutral-dark font-bold py-2 px-4 rounded-lg text-sm transition-colors shadow-lg shadow-primary/20">
+                            <div class="flex items-center gap-2 text-xs font-medium text-neutral-dark dark:text-gray-300 bg-background-light dark:bg-white/5 p-2 rounded-lg w-fit">
+                                <span class="material-symbols-outlined text-[16px]">schedule</span> 60 min
+                                <span class="w-px h-3 bg-gray-300 dark:bg-white/20 mx-1"></span>
+                                <span class="material-symbols-outlined text-[16px]">spa</span> Massage
+                            </div>
+                            <div class="flex items-center justify-between pt-2">
+                                <p class="text-lg font-bold text-neutral-dark dark:text-white">ksh900</p>
+                                <button class="bg-primary hover:bg-primary-hover text-neutral-dark font-bold py-2 px-4 rounded-lg text-sm transition-colors shadow-lg shadow-primary/20">
                                     Book Now
                                 </button>
-</div>
-</div>
-</div>
-<!-- Card 2 -->
-<div class="group bg-white dark:bg-card-dark rounded-2xl p-4 shadow-sm hover:shadow-xl transition-all duration-300 border border-[#f0f4f2] dark:border-white/5 hover:-translate-y-1">
-<div class="relative aspect-[4/3] rounded-xl overflow-hidden mb-4">
-<img alt="Therapist" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Male massage therapist preparing oils in a calm room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbDOsK0l1rK6LS1DEh-r9_mtRvrEByxTcDohHtKjNxoBAnQ1h9wBHkFnYNNdTot9vRCeQg6Vd1hQzigk5hnAgpbcNQBzFU6mTHCDgLeYKRcK32b84LzGBxTX-XW_NahyR0Vpwg5kawv_5QqBQYTKPQ1j564iaHZMhnV-7tsN3euS14r4-VccnZM-KaZMGwD5hDOsByYsMLiV6-XTLxeXW6QapbM2XJjo3vJ8E7znkOWfofuf5b24c2AMrhRGRy592p8h74IBB7yBc"/>
-<div class="absolute top-3 right-3 bg-white/90 dark:bg-black/60 backdrop-blur-sm px-2 py-1 rounded-lg flex items-center gap-1 text-xs font-bold text-neutral-dark dark:text-white shadow-sm">
-<span class="material-symbols-outlined text-[14px] text-[#FCD34D] fill-current">star</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="group bg-white dark:bg-card-dark rounded-2xl p-4 shadow-sm hover:shadow-xl transition-all duration-300 border border-[#f0f4f2] dark:border-white/5 hover:-translate-y-1">
+                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden mb-4">
+                            <img alt="Therapist" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Male massage therapist preparing oils in a calm room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbDOsK0l1rK6LS1DEh-r9_mtRvrEByxTcDohHtKjNxoBAnQ1h9wBHkFnYNNdTot9vRCeQg6Vd1hQzigk5hnAgpbcNQBzFU6mTHCDgLeYKRcK32b84LzGBxTX-XW_NahyR0Vpwg5kawv_5QqBQYTKPQ1j564iaHZMhnV-7tsN3euS14r4-VccnZM-KaZMGwD5hDOsByYsMLiV6-XTLxeXW6QapbM2XJjo3vJ8E7znkOWfofuf5b24c2AMrhRGRy592p8h74IBB7yBc"/>
+                            <div class="absolute top-3 right-3 bg-white/90 dark:bg-black/60 backdrop-blur-sm px-2 py-1 rounded-lg flex items-center gap-1 text-xs font-bold text-neutral-dark dark:text-white shadow-sm">
+                                <span class="material-symbols-outlined text-[14px] text-[#FCD34D] fill-current">star</span>
                                 4.8 (98)
                             </div>
-</div>
-<div class="space-y-3">
-<div>
-<h3 class="text-lg font-bold text-neutral-dark dark:text-white leading-tight">David Wanga</h3>
-<p class="text-sm text-neutral-gray dark:text-gray-400">Sports Recovery &amp; Thai</p>
-</div>
-<div class="flex items-center gap-2 text-xs font-medium text-neutral-dark dark:text-gray-300 bg-background-light dark:bg-white/5 p-2 rounded-lg w-fit">
-<span class="material-symbols-outlined text-[16px]">schedule</span> 90 min
-                                <span class="w-px h-3 bg-gray-300 dark:bg-white/20 mx-1"></span>
-<span class="material-symbols-outlined text-[16px]">accessibility_new</span> Sports
+                        </div>
+                        <div class="space-y-3">
+                            <div>
+                                <h3 class="text-lg font-bold text-neutral-dark dark:text-white leading-tight">David Wanga</h3>
+                                <p class="text-sm text-neutral-gray dark:text-gray-400">Sports Recovery &amp; Thai</p>
                             </div>
-<div class="flex items-center justify-between pt-2">
-<p class="text-lg font-bold text-neutral-dark dark:text-white">ksh1200</p>
-<button class="bg-primary hover:bg-primary-hover text-neutral-dark font-bold py-2 px-4 rounded-lg text-sm transition-colors shadow-lg shadow-primary/20">
+                            <div class="flex items-center gap-2 text-xs font-medium text-neutral-dark dark:text-gray-300 bg-background-light dark:bg-white/5 p-2 rounded-lg w-fit">
+                                <span class="material-symbols-outlined text-[16px]">schedule</span> 90 min
+                                <span class="w-px h-3 bg-gray-300 dark:bg-white/20 mx-1"></span>
+                                <span class="material-symbols-outlined text-[16px]">accessibility_new</span> Sports
+                            </div>
+                            <div class="flex items-center justify-between pt-2">
+                                <p class="text-lg font-bold text-neutral-dark dark:text-white">ksh1200</p>
+                                <button class="bg-primary hover:bg-primary-hover text-neutral-dark font-bold py-2 px-4 rounded-lg text-sm transition-colors shadow-lg shadow-primary/20">
                                     Book Now
                                 </button>
-</div>
-</div>
-</div>
-<!-- Card 3 -->
-<div class="group bg-white dark:bg-card-dark rounded-2xl p-4 shadow-sm hover:shadow-xl transition-all duration-300 border border-[#f0f4f2] dark:border-white/5 hover:-translate-y-1">
-<div class="relative aspect-[4/3] rounded-xl overflow-hidden mb-4">
-<img alt="Therapist" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close up of a relaxing facial treatment in a spa" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7YaWlbsFviFsuRLtwanTxk7wOkfe0mR_-_H8--H-6lAU3E0IK9WsCB8vz7jnZWnQV3ymscSIusRJCYnBM3Rj1FvYvF0Lzk3uLXaL8Ul6jiD6mCKIjVbcHuJljXppESNj2T7yKLZOSLPx1YZoG18I_10HhwjfE8E4dlA1SSKAKKezc5PIPd4S6DMeDVU5kMUSTSPVnTVrt6l19bEELPhwJ6njvbxeMZA49cdW25Br35UOU3QF--ETHoR6cp63qJJqtIyExBaLD8iA"/>
-<div class="absolute top-3 right-3 bg-white/90 dark:bg-black/60 backdrop-blur-sm px-2 py-1 rounded-lg flex items-center gap-1 text-xs font-bold text-neutral-dark dark:text-white shadow-sm">
-<span class="material-symbols-outlined text-[14px] text-[#FCD34D] fill-current">star</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 3 -->
+                    <div class="group bg-white dark:bg-card-dark rounded-2xl p-4 shadow-sm hover:shadow-xl transition-all duration-300 border border-[#f0f4f2] dark:border-white/5 hover:-translate-y-1">
+                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden mb-4">
+                            <img alt="Therapist" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close up of a relaxing facial treatment in a spa" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7YaWlbsFviFsuRLtwanTxk7wOkfe0mR_-_H8--H-6lAU3E0IK9WsCB8vz7jnZWnQV3ymscSIusRJCYnBM3Rj1FvYvF0Lzk3uLXaL8Ul6jiD6mCKIjVbcHuJljXppESNj2T7yKLZOSLPx1YZoG18I_10HhwjfE8E4dlA1SSKAKKezc5PIPd4S6DMeDVU5kMUSTSPVnTVrt6l19bEELPhwJ6njvbxeMZA49cdW25Br35UOU3QF--ETHoR6cp63qJJqtIyExBaLD8iA"/>
+                            <div class="absolute top-3 right-3 bg-white/90 dark:bg-black/60 backdrop-blur-sm px-2 py-1 rounded-lg flex items-center gap-1 text-xs font-bold text-neutral-dark dark:text-white shadow-sm">
+                                <span class="material-symbols-outlined text-[14px] text-[#FCD34D] fill-current">star</span>
                                 5.0 (42)
                             </div>
-</div>
-<div class="space-y-3">
-<div>
-<h3 class="text-lg font-bold text-neutral-dark dark:text-white leading-tight">Elena Atieno</h3>
-<p class="text-sm text-neutral-gray dark:text-gray-400">Holistic Facialist</p>
-</div>
-<div class="flex items-center gap-2 text-xs font-medium text-neutral-dark dark:text-gray-300 bg-background-light dark:bg-white/5 p-2 rounded-lg w-fit">
-<span class="material-symbols-outlined text-[16px]">schedule</span> 45 min
-                                <span class="w-px h-3 bg-gray-300 dark:bg-white/20 mx-1"></span>
-<span class="material-symbols-outlined text-[16px]">face</span> Facial
+                        </div>
+                        <div class="space-y-3">
+                            <div>
+                                <h3 class="text-lg font-bold text-neutral-dark dark:text-white leading-tight">Elena Atieno</h3>
+                                <p class="text-sm text-neutral-gray dark:text-gray-400">Holistic Facialist</p>
                             </div>
-<div class="flex items-center justify-between pt-2">
-<p class="text-lg font-bold text-neutral-dark dark:text-white">ksh8500</p>
-<button class="bg-primary hover:bg-primary-hover text-neutral-dark font-bold py-2 px-4 rounded-lg text-sm transition-colors shadow-lg shadow-primary/20">
+                            <div class="flex items-center gap-2 text-xs font-medium text-neutral-dark dark:text-gray-300 bg-background-light dark:bg-white/5 p-2 rounded-lg w-fit">
+                                <span class="material-symbols-outlined text-[16px]">schedule</span> 45 min
+                                <span class="w-px h-3 bg-gray-300 dark:bg-white/20 mx-1"></span>
+                                <span class="material-symbols-outlined text-[16px]">face</span> Facial
+                            </div>
+                            <div class="flex items-center justify-between pt-2">
+                                <p class="text-lg font-bold text-neutral-dark dark:text-white">ksh8500</p>
+                                <button class="bg-primary hover:bg-primary-hover text-neutral-dark font-bold py-2 px-4 rounded-lg text-sm transition-colors shadow-lg shadow-primary/20">
                                     Book Now
                                 </button>
-</div>
-</div>
-</div>
-<!-- Card 4 -->
-<div class="group bg-white dark:bg-card-dark rounded-2xl p-4 shadow-sm hover:shadow-xl transition-all duration-300 border border-[#f0f4f2] dark:border-white/5 hover:-translate-y-1">
-<div class="relative aspect-[4/3] rounded-xl overflow-hidden mb-4">
-<img alt="Therapist" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Aromatherapy setup with oils and flowers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2ox0mJCuGtKR5RIZVPDdl56I339I811r3ho0jLG16iTPDuGvJDCEyxUjrDd6FZUPPl0uWrOpVY-Jhlo1zmfAUC2RwVpGYBFqfBFEk3F4uzBcOcH-UPAZu2rpvQTmqDtzPPGmflw-IAPBBMCWHshoKCXCgqQALE6E4ew2c-HzZXKfQ0NfghCtQqDvxST7iy713bR4p3deWzVrFHTzc_xL0RJweNyaoy9Up359zWqXurUAFags4Ww-EoX0Y9I0Lqz7cPJdEgvX0cSs"/>
-<div class="absolute top-3 right-3 bg-white/90 dark:bg-black/60 backdrop-blur-sm px-2 py-1 rounded-lg flex items-center gap-1 text-xs font-bold text-neutral-dark dark:text-white shadow-sm">
-<span class="material-symbols-outlined text-[14px] text-[#FCD34D] fill-current">star</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 4 -->
+                    <div class="group bg-white dark:bg-card-dark rounded-2xl p-4 shadow-sm hover:shadow-xl transition-all duration-300 border border-[#f0f4f2] dark:border-white/5 hover:-translate-y-1">
+                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden mb-4">
+                            <img alt="Therapist" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Aromatherapy setup with oils and flowers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2ox0mJCuGtKR5RIZVPDdl56I339I811r3ho0jLG16iTPDuGvJDCEyxUjrDd6FZUPPl0uWrOpVY-Jhlo1zmfAUC2RwVpGYBFqfBFEk3F4uzBcOcH-UPAZu2rpvQTmqDtzPPGmflw-IAPBBMCWHshoKCXCgqQALE6E4ew2c-HzZXKfQ0NfghCtQqDvxST7iy713bR4p3deWzVrFHTzc_xL0RJweNyaoy9Up359zWqXurUAFags4Ww-EoX0Y9I0Lqz7cPJdEgvX0cSs"/>
+                            <div class="absolute top-3 right-3 bg-white/90 dark:bg-black/60 backdrop-blur-sm px-2 py-1 rounded-lg flex items-center gap-1 text-xs font-bold text-neutral-dark dark:text-white shadow-sm">
+                                <span class="material-symbols-outlined text-[14px] text-[#FCD34D] fill-current">star</span>
                                 4.7 (215)
                             </div>
-</div>
-<div class="space-y-3">
-<div>
-<h3 class="text-lg font-bold text-neutral-dark dark:text-white leading-tight">Pure Bliss Center</h3>
-<p class="text-sm text-neutral-gray dark:text-gray-400">Aromatherapy Session</p>
-</div>
-<div class="flex items-center gap-2 text-xs font-medium text-neutral-dark dark:text-gray-300 bg-background-light dark:bg-white/5 p-2 rounded-lg w-fit">
-<span class="material-symbols-outlined text-[16px]">schedule</span> 60 min
-                                <span class="w-px h-3 bg-gray-300 dark:bg-white/20 mx-1"></span>
-<span class="material-symbols-outlined text-[16px]">local_florist</span> Aroma
+                        </div>
+                        <div class="space-y-3">
+                            <div>
+                                <h3 class="text-lg font-bold text-neutral-dark dark:text-white leading-tight">Pure Bliss Center</h3>
+                                <p class="text-sm text-neutral-gray dark:text-gray-400">Aromatherapy Session</p>
                             </div>
-<div class="flex items-center justify-between pt-2">
-<p class="text-lg font-bold text-neutral-dark dark:text-white">ksh 4500</p>
-<button class="bg-primary hover:bg-primary-hover text-neutral-dark font-bold py-2 px-4 rounded-lg text-sm transition-colors shadow-lg shadow-primary/20">
+                            <div class="flex items-center gap-2 text-xs font-medium text-neutral-dark dark:text-gray-300 bg-background-light dark:bg-white/5 p-2 rounded-lg w-fit">
+                                <span class="material-symbols-outlined text-[16px]">schedule</span> 60 min
+                                <span class="w-px h-3 bg-gray-300 dark:bg-white/20 mx-1"></span>
+                                <span class="material-symbols-outlined text-[16px]">local_florist</span> Aroma
+                            </div>
+                            <div class="flex items-center justify-between pt-2">
+                                <p class="text-lg font-bold text-neutral-dark dark:text-white">ksh 4500</p>
+                                <button class="bg-primary hover:bg-primary-hover text-neutral-dark font-bold py-2 px-4 rounded-lg text-sm transition-colors shadow-lg shadow-primary/20">
                                     Book Now
                                 </button>
-</div>
-</div>
-</div>
-<!-- Card 5 -->
-<div class="group bg-white dark:bg-card-dark rounded-2xl p-4 shadow-sm hover:shadow-xl transition-all duration-300 border border-[#f0f4f2] dark:border-white/5 hover:-translate-y-1">
-<div class="relative aspect-[4/3] rounded-xl overflow-hidden mb-4">
-<img alt="Therapist" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Warm stones for hot stone massage therapy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyoHuTLtffitYEIuER3hblI06M4oOjp3SeX9099OHeQWvNW5v50IEekcdn2MVAIwy7lp0sUfIxe49ouNnhGgtS9xWfGwranrzkLl_xKzMoK1elnhOPqWI53p2jA_Xt57Zjl3XzazywBFnLYmBP4XpvGYVUnqKuwbtjo-ftE76M9YlobisYfS9762FqS9lin-gY_EOkxQo0joL1h2k9mZQK67dX3T8Lp7GfuGNyqY8-sGnbWdCbdpkN-iUW9wT_qcaTSbfXzD-nV4A"/>
-<div class="absolute top-3 right-3 bg-white/90 dark:bg-black/60 backdrop-blur-sm px-2 py-1 rounded-lg flex items-center gap-1 text-xs font-bold text-neutral-dark dark:text-white shadow-sm">
-<span class="material-symbols-outlined text-[14px] text-[#FCD34D] fill-current">star</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 5 -->
+                    <div class="group bg-white dark:bg-card-dark rounded-2xl p-4 shadow-sm hover:shadow-xl transition-all duration-300 border border-[#f0f4f2] dark:border-white/5 hover:-translate-y-1">
+                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden mb-4">
+                            <img alt="Therapist" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Warm stones for hot stone massage therapy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyoHuTLtffitYEIuER3hblI06M4oOjp3SeX9099OHeQWvNW5v50IEekcdn2MVAIwy7lp0sUfIxe49ouNnhGgtS9xWfGwranrzkLl_xKzMoK1elnhOPqWI53p2jA_Xt57Zjl3XzazywBFnLYmBP4XpvGYVUnqKuwbtjo-ftE76M9YlobisYfS9762FqS9lin-gY_EOkxQo0joL1h2k9mZQK67dX3T8Lp7GfuGNyqY8-sGnbWdCbdpkN-iUW9wT_qcaTSbfXzD-nV4A"/>
+                            <div class="absolute top-3 right-3 bg-white/90 dark:bg-black/60 backdrop-blur-sm px-2 py-1 rounded-lg flex items-center gap-1 text-xs font-bold text-neutral-dark dark:text-white shadow-sm">
+                                <span class="material-symbols-outlined text-[14px] text-[#FCD34D] fill-current">star</span>
                                 4.9 (88)
                             </div>
-</div>
-<div class="space-y-3">
-<div>
-<h3 class="text-lg font-bold text-neutral-dark dark:text-white leading-tight">Marcus Thiongo</h3>
-<p class="text-sm text-neutral-gray dark:text-gray-400">Hot Stone Expert</p>
-</div>
-<div class="flex items-center gap-2 text-xs font-medium text-neutral-dark dark:text-gray-300 bg-background-light dark:bg-white/5 p-2 rounded-lg w-fit">
-<span class="material-symbols-outlined text-[16px]">schedule</span> 75 min
-                                <span class="w-px h-3 bg-gray-300 dark:bg-white/20 mx-1"></span>
-<span class="material-symbols-outlined text-[16px]">landscape</span> Stones
+                        </div>
+                        <div class="space-y-3">
+                            <div>
+                                <h3 class="text-lg font-bold text-neutral-dark dark:text-white leading-tight">Marcus Thiongo</h3>
+                                <p class="text-sm text-neutral-gray dark:text-gray-400">Hot Stone Expert</p>
                             </div>
-<div class="flex items-center justify-between pt-2">
-<p class="text-lg font-bold text-neutral-dark dark:text-white">ksh1300</p>
-<button class="bg-primary hover:bg-primary-hover text-neutral-dark font-bold py-2 px-4 rounded-lg text-sm transition-colors shadow-lg shadow-primary/20">
+                            <div class="flex items-center gap-2 text-xs font-medium text-neutral-dark dark:text-gray-300 bg-background-light dark:bg-white/5 p-2 rounded-lg w-fit">
+                                <span class="material-symbols-outlined text-[16px]">schedule</span> 75 min
+                                <span class="w-px h-3 bg-gray-300 dark:bg-white/20 mx-1"></span>
+                                <span class="material-symbols-outlined text-[16px]">landscape</span> Stones
+                            </div>
+                            <div class="flex items-center justify-between pt-2">
+                                <p class="text-lg font-bold text-neutral-dark dark:text-white">ksh1300</p>
+                                <button class="bg-primary hover:bg-primary-hover text-neutral-dark font-bold py-2 px-4 rounded-lg text-sm transition-colors shadow-lg shadow-primary/20">
                                     Book Now
                                 </button>
-</div>
-</div>
-</div>
-<!-- Card 6 -->
-<div class="group bg-white dark:bg-card-dark rounded-2xl p-4 shadow-sm hover:shadow-xl transition-all duration-300 border border-[#f0f4f2] dark:border-white/5 hover:-translate-y-1">
-<div class="relative aspect-[4/3] rounded-xl overflow-hidden mb-4">
-<img alt="Therapist" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Couple relaxing in a calm spa environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArnc_7FyXM0TPl5VpKYT6dNFatUMlL4lCBSLHmqvw61dkiesQbSgUDtl2O-3bOGILSUhzfA4OswYou8VRAeDR4e51zqAXAlb5-ipzrbUfyl1eaJDIFb1qgqJ83RFpcTI4RX35uufRcyTL56HVHH56dZvoe8ZSgdx1qdkqprJ-mC8z8EmVsM02Ui7PlpX0lytPTiX1OE15hGZETa275Bg4hJXJCRdAzcELZiPPAGAQGhYKOmDy5B88x49MjbUBufiUKnli1Qw-ybKI"/>
-<div class="absolute top-3 right-3 bg-white/90 dark:bg-black/60 backdrop-blur-sm px-2 py-1 rounded-lg flex items-center gap-1 text-xs font-bold text-neutral-dark dark:text-white shadow-sm">
-<span class="material-symbols-outlined text-[14px] text-[#FCD34D] fill-current">star</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 6 -->
+                    <div class="group bg-white dark:bg-card-dark rounded-2xl p-4 shadow-sm hover:shadow-xl transition-all duration-300 border border-[#f0f4f2] dark:border-white/5 hover:-translate-y-1">
+                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden mb-4">
+                            <img alt="Therapist" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Couple relaxing in a calm spa environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArnc_7FyXM0TPl5VpKYT6dNFatUMlL4lCBSLHmqvw61dkiesQbSgUDtl2O-3bOGILSUhzfA4OswYou8VRAeDR4e51zqAXAlb5-ipzrbUfyl1eaJDIFb1qgqJ83RFpcTI4RX35uufRcyTL56HVHH56dZvoe8ZSgdx1qdkqprJ-mC8z8EmVsM02Ui7PlpX0lytPTiX1OE15hGZETa275Bg4hJXJCRdAzcELZiPPAGAQGhYKOmDy5B88x49MjbUBufiUKnli1Qw-ybKI"/>
+                            <div class="absolute top-3 right-3 bg-white/90 dark:bg-black/60 backdrop-blur-sm px-2 py-1 rounded-lg flex items-center gap-1 text-xs font-bold text-neutral-dark dark:text-white shadow-sm">
+                                <span class="material-symbols-outlined text-[14px] text-[#FCD34D] fill-current">star</span>
                                 5.0 (15)
                             </div>
-</div>
-<div class="space-y-3">
-<div>
-<h3 class="text-lg font-bold text-neutral-dark dark:text-white leading-tight">The Sanctuary</h3>
-<p class="text-sm text-neutral-gray dark:text-gray-400">Couple's Retreat Package</p>
-</div>
-<div class="flex items-center gap-2 text-xs font-medium text-neutral-dark dark:text-gray-300 bg-background-light dark:bg-white/5 p-2 rounded-lg w-fit">
-<span class="material-symbols-outlined text-[16px]">schedule</span> 120 min
-                                <span class="w-px h-3 bg-gray-300 dark:bg-white/20 mx-1"></span>
-<span class="material-symbols-outlined text-[16px]">favorite</span> Couple
+                        </div>
+                        <div class="space-y-3">
+                            <div>
+                                <h3 class="text-lg font-bold text-neutral-dark dark:text-white leading-tight">The Sanctuary</h3>
+                                <p class="text-sm text-neutral-gray dark:text-gray-400">Couple's Retreat Package</p>
                             </div>
-<div class="flex items-center justify-between pt-2">
-<p class="text-lg font-bold text-neutral-dark dark:text-white">ksh 9500</p>
-<button class="bg-primary hover:bg-primary-hover text-neutral-dark font-bold py-2 px-4 rounded-lg text-sm transition-colors shadow-lg shadow-primary/20">
+                            <div class="flex items-center gap-2 text-xs font-medium text-neutral-dark dark:text-gray-300 bg-background-light dark:bg-white/5 p-2 rounded-lg w-fit">
+                                <span class="material-symbols-outlined text-[16px]">schedule</span> 120 min
+                                <span class="w-px h-3 bg-gray-300 dark:bg-white/20 mx-1"></span>
+                                <span class="material-symbols-outlined text-[16px]">favorite</span> Couple
+                            </div>
+                            <div class="flex items-center justify-between pt-2">
+                                <p class="text-lg font-bold text-neutral-dark dark:text-white">ksh 9500</p>
+                                <button class="bg-primary hover:bg-primary-hover text-neutral-dark font-bold py-2 px-4 rounded-lg text-sm transition-colors shadow-lg shadow-primary/20">
                                     Book Now
                                 </button>
-</div>
-</div>
-</div>
-</div>
-<!-- Pagination -->
-<div class="mt-12 flex justify-center">
-<nav aria-label="Pagination" class="flex items-center gap-2">
-<a class="p-2 rounded-lg text-neutral-gray hover:bg-white dark:hover:bg-white/10 hover:text-neutral-dark transition-colors" href="#">
-<span class="material-symbols-outlined">chevron_left</span>
-</a>
-<a class="size-10 flex items-center justify-center rounded-lg bg-primary text-neutral-dark font-bold shadow-md shadow-primary/20" href="#">1</a>
-<a class="size-10 flex items-center justify-center rounded-lg text-neutral-gray hover:bg-white dark:hover:bg-white/10 hover:text-neutral-dark transition-colors font-medium" href="#">2</a>
-<a class="size-10 flex items-center justify-center rounded-lg text-neutral-gray hover:bg-white dark:hover:bg-white/10 hover:text-neutral-dark transition-colors font-medium" href="#">3</a>
-<span class="text-neutral-gray px-2">...</span>
-<a class="size-10 flex items-center justify-center rounded-lg text-neutral-gray hover:bg-white dark:hover:bg-white/10 hover:text-neutral-dark transition-colors font-medium" href="#">8</a>
-<a class="p-2 rounded-lg text-neutral-gray hover:bg-white dark:hover:bg-white/10 hover:text-neutral-dark transition-colors" href="#">
-<span class="material-symbols-outlined">chevron_right</span>
-</a>
-</nav>
-</div>
-</div>
-</div>
-</main>
-<!-- Footer -->
-<footer class="bg-white dark:bg-card-dark border-t border-[#f0f4f2] dark:border-white/5 py-12">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-<div class="col-span-1 md:col-span-1">
-<div class="flex items-center gap-2 mb-4">
-<div class="size-6 text-primary">
-<svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-<h2 class="text-neutral-dark dark:text-white text-lg font-bold">Touch Spa</h2>
-</div>
-<p class="text-neutral-gray text-sm leading-relaxed">Relax, rejuvenate, and restore your balance with our premium selection of trusted therapists.</p>
-</div>
-<div>
-<h4 class="text-neutral-dark dark:text-white font-bold mb-4">Company</h4>
-<ul class="space-y-2 text-sm text-neutral-gray">
-<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Blog</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-neutral-dark dark:text-white font-bold mb-4">Support</h4>
-<ul class="space-y-2 text-sm text-neutral-gray">
-<li><a class="hover:text-primary transition-colors" href="#">Help Center</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-neutral-dark dark:text-white font-bold mb-4">Stay Connected</h4>
-<div class="flex gap-4">
-<a class="text-neutral-gray hover:text-primary transition-colors" href="#">
-<span class="sr-only">Instagram</span>
-<svg class="size-6" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
-</a>
-<a class="text-neutral-gray hover:text-primary transition-colors" href="#">
-<span class="sr-only">Twitter</span>
-<svg class="size-6" fill="currentColor" viewbox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>
-</a>
-</div>
-</div>
-</div>
-<div class="border-t border-[#f0f4f2] dark:border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-<p class="text-neutral-gray text-xs">© 2026 Touch Spa Inc. All rights reserved.</p>
-<div class="flex gap-6">
-<p class="text-neutral-gray text-xs">Privacy</p>
-<p class="text-neutral-gray text-xs">Terms</p>
-<p class="text-neutral-gray text-xs">Sitemap</p>
-</div>
-</div>
-</div>
-</footer>
-</body></html>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pagination -->
+                <div class="mt-12 flex justify-center">
+                    <nav aria-label="Pagination" class="flex items-center gap-2">
+                        <a class="p-2 rounded-lg text-neutral-gray hover:bg-white dark:hover:bg-white/10 hover:text-neutral-dark transition-colors" href="#">
+                            <span class="material-symbols-outlined">chevron_left</span>
+                        </a>
+                        <a class="size-10 flex items-center justify-center rounded-lg bg-primary text-neutral-dark font-bold shadow-md shadow-primary/20" href="#">1</a>
+                        <a class="size-10 flex items-center justify-center rounded-lg text-neutral-gray hover:bg-white dark:hover:bg-white/10 hover:text-neutral-dark transition-colors font-medium" href="#">2</a>
+                        <a class="size-10 flex items-center justify-center rounded-lg text-neutral-gray hover:bg-white dark:hover:bg-white/10 hover:text-neutral-dark transition-colors font-medium" href="#">3</a>
+                        <span class="text-neutral-gray px-2">...</span>
+                        <a class="size-10 flex items-center justify-center rounded-lg text-neutral-gray hover:bg-white dark:hover:bg-white/10 hover:text-neutral-dark transition-colors font-medium" href="#">8</a>
+                        <a class="p-2 rounded-lg text-neutral-gray hover:bg-white dark:hover:bg-white/10 hover:text-neutral-dark transition-colors" href="#">
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-card-dark border-t border-[#f0f4f2] dark:border-white/5 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="size-6 text-primary">
+                            <svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                <path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <h2 class="text-neutral-dark dark:text-white text-lg font-bold">Touch Spa</h2>
+                    </div>
+                    <p class="text-neutral-gray text-sm leading-relaxed">Relax, rejuvenate, and restore your balance with our premium selection of trusted therapists.</p>
+                </div>
+                <div>
+                    <h4 class="text-neutral-dark dark:text-white font-bold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm text-neutral-gray">
+                        <li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-neutral-dark dark:text-white font-bold mb-4">Support</h4>
+                    <ul class="space-y-2 text-sm text-neutral-gray">
+                        <li><a class="hover:text-primary transition-colors" href="#">Help Center</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-neutral-dark dark:text-white font-bold mb-4">Stay Connected</h4>
+                    <div class="flex gap-4">
+                        <a class="text-neutral-gray hover:text-primary transition-colors" href="#">
+                            <span class="sr-only">Instagram</span>
+                            <svg class="size-6" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+                        </a>
+                        <a class="text-neutral-gray hover:text-primary transition-colors" href="#">
+                            <span class="sr-only">Twitter</span>
+                            <svg class="size-6" fill="currentColor" viewbox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-[#f0f4f2] dark:border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-neutral-gray text-xs">© 2026 Touch Spa Inc. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <p class="text-neutral-gray text-xs">Privacy</p>
+                    <p class="text-neutral-gray text-xs">Terms</p>
+                    <p class="text-neutral-gray text-xs">Sitemap</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

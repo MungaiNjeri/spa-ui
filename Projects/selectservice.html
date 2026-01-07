@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Touch Spa Booking - Select Service &amp; Time</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Touch Spa Booking - Select Service &amp; Time</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -30,268 +30,286 @@
             },
         }
     </script>
-<style>/* Custom radio styling to ensure ring color matches primary */
-input[type="radio"]:checked {
-    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuA0FZQ3j0gPAHapzRTOgPKlcoVPIZAo_pq9bRQ-nPL7c-ftV_wI8ftj8RwTMGauYeZhquHWcpqTPA8wsG25dXdSQxYUt7iBoy977zhrtiAWWP8wj4JWadHf7aS8o7BCwlix5bBSX5vFqC3zcu3nJg-_oZlEXxHUNllhwRmJ07tnFCW1idrKxh5c6TAk-kjW3Cd_Qr7KwdozOERQf63mNYjwZRP2CR0dtUOqQFbQbLPSpJcpB1h68GFCyV2DPitBmF7VrQAlhjG2azQ)
-    }
-.scrollbar-hide::-webkit-scrollbar {
-    display: none
-    }</style>
+    <style>/* Custom radio styling to ensure ring color matches primary */
+    input[type="radio"]:checked {
+        background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuA0FZQ3j0gPAHapzRTOgPKlcoVPIZAo_pq9bRQ-nPL7c-ftV_wI8ftj8RwTMGauYeZhquHWcpqTPA8wsG25dXdSQxYUt7iBoy977zhrtiAWWP8wj4JWadHf7aS8o7BCwlix5bBSX5vFqC3zcu3nJg-_oZlEXxHUNllhwRmJ07tnFCW1idrKxh5c6TAk-kjW3Cd_Qr7KwdozOERQf63mNYjwZRP2CR0dtUOqQFbQbLPSpJcpB1h68GFCyV2DPitBmF7VrQAlhjG2azQ)
+        }
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none
+        }</style>
 </head>
 <body class="font-display bg-background-light dark:bg-background-dark text-text-main dark:text-white transition-colors duration-200">
-<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
-<!-- Header -->
-<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-[#f0f4f2] dark:border-[#2a3830] bg-surface-light dark:bg-surface-dark px-6 py-4 lg:px-10">
-<div class="flex items-center gap-4 text-text-main dark:text-white">
-<div class="size-8 flex items-center justify-center text-primary">
-<span class="material-symbols-outlined text-3xl">spa</span>
-</div>
-<h2 class="text-text-main dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">Touch Spa</h2>
-</div>
-<div class="hidden lg:flex flex-1 justify-end gap-8">
-<nav class="flex items-center gap-9">
-<a class="text-text-main dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
-<a class="text-text-main dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors" href="#">Services</a>
-<a class="text-text-main dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors" href="#">Membership</a>
-<a class="text-text-main dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
-</nav>
-<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-6 bg-primary text-[#111814] text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
-<span class="truncate">Log In</span>
-</button>
-</div>
-<div class="lg:hidden">
-<span class="material-symbols-outlined text-text-main dark:text-white cursor-pointer">menu</span>
-</div>
-</header>
-<!-- Main Content -->
-<div class="flex-1 flex justify-center py-6 lg:py-10 px-4 sm:px-6 lg:px-8">
-<div class="w-full max-w-[1280px] flex flex-col gap-6">
-<!-- Breadcrumbs / Stepper -->
-<div class="flex flex-wrap items-center gap-3 text-sm font-medium mb-4">
-<a class="flex items-center gap-2 text-primary" href="#">
-<span class="flex items-center justify-center w-6 h-6 rounded-full bg-primary text-black text-xs font-bold">1</span>
-<span>Service</span>
-</a>
-<span class="text-text-muted">/</span>
-<a class="flex items-center gap-2 text-text-main dark:text-white" href="#">
-<span class="flex items-center justify-center w-6 h-6 rounded-full border border-gray-300 dark:border-gray-600 text-xs">2</span>
-<span>Date &amp; Time</span>
-</a>
-<span class="text-text-muted">/</span>
-<span class="text-text-muted dark:text-gray-500">Details</span>
-<span class="text-text-muted">/</span>
-<span class="text-text-muted dark:text-gray-500">Confirmation</span>
-</div>
-<!-- Page Heading -->
-<div class="flex flex-col gap-2 mb-2">
-<h1 class="text-text-main dark:text-white text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em]">Book Your Relaxation</h1>
-<p class="text-text-muted dark:text-gray-400 text-base font-normal">Select your preferred treatment, date, and time.</p>
-</div>
-<!-- Two Column Layout -->
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
-<!-- Left Column: Selection Flow -->
-<div class="lg:col-span-8 flex flex-col gap-10">
-<!-- 1. Select Service -->
-<section>
-<h2 class="text-text-main dark:text-white text-2xl font-bold leading-tight mb-5 flex items-center gap-3">
-<span class="material-symbols-outlined text-primary">spa</span>
+    <div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <!-- Header -->
+        <header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-[#f0f4f2] dark:border-[#2a3830] bg-surface-light dark:bg-surface-dark px-6 py-4 lg:px-10">
+            <div class="flex items-center gap-4 text-text-main dark:text-white">
+                <div class="size-8 flex items-center justify-center text-primary">
+                    <span class="material-symbols-outlined text-3xl">spa</span>
+                </div>
+                <h2 class="text-text-main dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">Touch Spa</h2>
+            </div>
+            <div class="hidden lg:flex flex-1 justify-end gap-8">
+                <nav class="flex items-center gap-9">
+                    <a class="text-text-main dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors" href="index.html">Home</a>
+                    <a class="text-text-main dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors" href="services.html">Services</a>
+                    <a class="text-text-main dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors" href="location.html">Locations</a>
+                    <a class="text-text-main dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors" href="#">Book Service</a>
+                    <a class="text-text-main dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors" href="professionalprofile.html">Become a Pro</a>
+                </nav>
+                <button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-6 bg-primary text-[#111814] text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
+                    <span class="truncate">Log In</span>
+                </button>
+            </div>
+            <div class="lg:hidden">
+                <span class="material-symbols-outlined text-text-main dark:text-white cursor-pointer">menu</span>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="flex-1 flex justify-center py-6 lg:py-10 px-4 sm:px-6 lg:px-8">
+            <div class="w-full max-w-[1280px] flex flex-col gap-6">
+                <!-- Back to Home Button -->
+                <div class="mb-2">
+                    <a href="index.html" class="inline-flex items-center text-primary font-bold hover:underline text-sm">
+                        <span class="material-symbols-outlined mr-1">arrow_back</span> Back to Home
+                    </a>
+                </div>
+
+                <!-- Breadcrumbs / Stepper -->
+                <div class="flex flex-wrap items-center gap-3 text-sm font-medium mb-4">
+                    <a class="flex items-center gap-2 text-primary" href="#">
+                        <span class="flex items-center justify-center w-6 h-6 rounded-full bg-primary text-black text-xs font-bold">1</span>
+                        <span>Service</span>
+                    </a>
+                    <span class="text-text-muted">/</span>
+                    <a class="flex items-center gap-2 text-text-main dark:text-white" href="#">
+                        <span class="flex items-center justify-center w-6 h-6 rounded-full border border-gray-300 dark:border-gray-600 text-xs">2</span>
+                        <span>Date &amp; Time</span>
+                    </a>
+                    <span class="text-text-muted">/</span>
+                    <span class="text-text-muted dark:text-gray-500">Details</span>
+                    <span class="text-text-muted">/</span>
+                    <span class="text-text-muted dark:text-gray-500">Confirmation</span>
+                </div>
+                
+                <!-- Page Heading -->
+                <div class="flex flex-col gap-2 mb-2">
+                    <h1 class="text-text-main dark:text-white text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em]">Book Your Relaxation</h1>
+                    <p class="text-text-muted dark:text-gray-400 text-base font-normal">Select your preferred treatment, date, and time.</p>
+                </div>
+                
+                <!-- Two Column Layout -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+                    <!-- Left Column: Selection Flow -->
+                    <div class="lg:col-span-8 flex flex-col gap-10">
+                        <!-- 1. Select Service -->
+                        <section>
+                            <h2 class="text-text-main dark:text-white text-2xl font-bold leading-tight mb-5 flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary">spa</span>
                                 Select a Service
                             </h2>
-<div class="flex flex-col gap-4">
-<!-- Service Card 1 -->
-<label class="group relative flex cursor-pointer flex-col sm:flex-row items-start sm:items-center justify-between gap-4 rounded-xl border-2 border-transparent bg-surface-light dark:bg-surface-dark p-5 shadow-[0_4px_20px_rgba(0,0,0,0.03)] dark:shadow-none hover:border-primary/50 transition-all has-[:checked]:border-primary has-[:checked]:bg-green-50/10 dark:has-[:checked]:bg-green-900/10">
-<div class="flex items-start gap-4 flex-1">
-<div class="mt-1 h-5 w-5 shrink-0 rounded-full border border-gray-300 dark:border-gray-600 group-has-[:checked]:border-primary group-has-[:checked]:bg-primary flex items-center justify-center">
-<div class="h-2 w-2 rounded-full bg-black opacity-0 group-has-[:checked]:opacity-100"></div>
-</div>
-<input checked="" class="peer sr-only" name="service" type="radio"/>
-<div class="flex flex-col gap-1">
-<p class="text-text-main dark:text-white text-lg font-bold">Swedish Massage - 60 min</p>
-<p class="text-text-muted dark:text-gray-400 text-sm">Classic relaxation technique to improve circulation and reduce stress.</p>
-</div>
-</div>
-<div class="pl-9 sm:pl-0">
-<span class="text-lg font-bold text-text-main dark:text-white">ksh 850</span>
-</div>
-</label>
-<!-- Service Card 2 -->
-<label class="group relative flex cursor-pointer flex-col sm:flex-row items-start sm:items-center justify-between gap-4 rounded-xl border-2 border-transparent bg-surface-light dark:bg-surface-dark p-5 shadow-[0_4px_20px_rgba(0,0,0,0.03)] dark:shadow-none hover:border-primary/50 transition-all has-[:checked]:border-primary has-[:checked]:bg-green-50/10 dark:has-[:checked]:bg-green-900/10">
-<div class="flex items-start gap-4 flex-1">
-<div class="mt-1 h-5 w-5 shrink-0 rounded-full border border-gray-300 dark:border-gray-600 group-has-[:checked]:border-primary group-has-[:checked]:bg-primary flex items-center justify-center">
-<div class="h-2 w-2 rounded-full bg-black opacity-0 group-has-[:checked]:opacity-100"></div>
-</div>
-<input class="peer sr-only" name="service" type="radio"/>
-<div class="flex flex-col gap-1">
-<p class="text-text-main dark:text-white text-lg font-bold">Deep Tissue Massage - 60 min</p>
-<p class="text-text-muted dark:text-gray-400 text-sm">Intense pressure to target deep muscle tension and chronic pain.</p>
-</div>
-</div>
-<div class="pl-9 sm:pl-0">
-<span class="text-lg font-bold text-text-main dark:text-white">ksh 1210</span>
-</div>
-</label>
-<!-- Service Card 3 -->
-<label class="group relative flex cursor-pointer flex-col sm:flex-row items-start sm:items-center justify-between gap-4 rounded-xl border-2 border-transparent bg-surface-light dark:bg-surface-dark p-5 shadow-[0_4px_20px_rgba(0,0,0,0.03)] dark:shadow-none hover:border-primary/50 transition-all has-[:checked]:border-primary has-[:checked]:bg-green-50/10 dark:has-[:checked]:bg-green-900/10">
-<div class="flex items-start gap-4 flex-1">
-<div class="mt-1 h-5 w-5 shrink-0 rounded-full border border-gray-300 dark:border-gray-600 group-has-[:checked]:border-primary group-has-[:checked]:bg-primary flex items-center justify-center">
-<div class="h-2 w-2 rounded-full bg-black opacity-0 group-has-[:checked]:opacity-100"></div>
-</div>
-<input class="peer sr-only" name="service" type="radio"/>
-<div class="flex flex-col gap-1">
-<p class="text-text-main dark:text-white text-lg font-bold">Hot Stone Therapy - 90 min</p>
-<p class="text-text-muted dark:text-gray-400 text-sm">Heated stones placed on key points for deep tissue relaxation.</p>
-</div>
-</div>
-<div class="pl-9 sm:pl-0">
-<span class="text-lg font-bold text-text-main dark:text-white">ksh1400</span>
-</div>
-</label>
-</div>
-</section>
-<!-- 2. Select Date & Time (Combined into one visual block for better UX) -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<!-- Calendar -->
-<section class="flex flex-col gap-4">
-<h2 class="text-text-main dark:text-white text-2xl font-bold leading-tight mb-1 flex items-center gap-3">
-<span class="material-symbols-outlined text-primary">calendar_month</span>
+                            <div class="flex flex-col gap-4">
+                                <!-- Service Card 1 -->
+                                <label class="group relative flex cursor-pointer flex-col sm:flex-row items-start sm:items-center justify-between gap-4 rounded-xl border-2 border-transparent bg-surface-light dark:bg-surface-dark p-5 shadow-[0_4px_20px_rgba(0,0,0,0.03)] dark:shadow-none hover:border-primary/50 transition-all has-[:checked]:border-primary has-[:checked]:bg-green-50/10 dark:has-[:checked]:bg-green-900/10">
+                                    <div class="flex items-start gap-4 flex-1">
+                                        <div class="mt-1 h-5 w-5 shrink-0 rounded-full border border-gray-300 dark:border-gray-600 group-has-[:checked]:border-primary group-has-[:checked]:bg-primary flex items-center justify-center">
+                                            <div class="h-2 w-2 rounded-full bg-black opacity-0 group-has-[:checked]:opacity-100"></div>
+                                        </div>
+                                        <input checked="" class="peer sr-only" name="service" type="radio"/>
+                                        <div class="flex flex-col gap-1">
+                                            <p class="text-text-main dark:text-white text-lg font-bold">Swedish Massage - 60 min</p>
+                                            <p class="text-text-muted dark:text-gray-400 text-sm">Classic relaxation technique to improve circulation and reduce stress.</p>
+                                        </div>
+                                    </div>
+                                    <div class="pl-9 sm:pl-0">
+                                        <span class="text-lg font-bold text-text-main dark:text-white">ksh 850</span>
+                                    </div>
+                                </label>
+                                
+                                <!-- Service Card 2 -->
+                                <label class="group relative flex cursor-pointer flex-col sm:flex-row items-start sm:items-center justify-between gap-4 rounded-xl border-2 border-transparent bg-surface-light dark:bg-surface-dark p-5 shadow-[0_4px_20px_rgba(0,0,0,0.03)] dark:shadow-none hover:border-primary/50 transition-all has-[:checked]:border-primary has-[:checked]:bg-green-50/10 dark:has-[:checked]:bg-green-900/10">
+                                    <div class="flex items-start gap-4 flex-1">
+                                        <div class="mt-1 h-5 w-5 shrink-0 rounded-full border border-gray-300 dark:border-gray-600 group-has-[:checked]:border-primary group-has-[:checked]:bg-primary flex items-center justify-center">
+                                            <div class="h-2 w-2 rounded-full bg-black opacity-0 group-has-[:checked]:opacity-100"></div>
+                                        </div>
+                                        <input class="peer sr-only" name="service" type="radio"/>
+                                        <div class="flex flex-col gap-1">
+                                            <p class="text-text-main dark:text-white text-lg font-bold">Deep Tissue Massage - 60 min</p>
+                                            <p class="text-text-muted dark:text-gray-400 text-sm">Intense pressure to target deep muscle tension and chronic pain.</p>
+                                        </div>
+                                    </div>
+                                    <div class="pl-9 sm:pl-0">
+                                        <span class="text-lg font-bold text-text-main dark:text-white">ksh 1210</span>
+                                    </div>
+                                </label>
+                                
+                                <!-- Service Card 3 -->
+                                <label class="group relative flex cursor-pointer flex-col sm:flex-row items-start sm:items-center justify-between gap-4 rounded-xl border-2 border-transparent bg-surface-light dark:bg-surface-dark p-5 shadow-[0_4px_20px_rgba(0,0,0,0.03)] dark:shadow-none hover:border-primary/50 transition-all has-[:checked]:border-primary has-[:checked]:bg-green-50/10 dark:has-[:checked]:bg-green-900/10">
+                                    <div class="flex items-start gap-4 flex-1">
+                                        <div class="mt-1 h-5 w-5 shrink-0 rounded-full border border-gray-300 dark:border-gray-600 group-has-[:checked]:border-primary group-has-[:checked]:bg-primary flex items-center justify-center">
+                                            <div class="h-2 w-2 rounded-full bg-black opacity-0 group-has-[:checked]:opacity-100"></div>
+                                        </div>
+                                        <input class="peer sr-only" name="service" type="radio"/>
+                                        <div class="flex flex-col gap-1">
+                                            <p class="text-text-main dark:text-white text-lg font-bold">Hot Stone Therapy - 90 min</p>
+                                            <p class="text-text-muted dark:text-gray-400 text-sm">Heated stones placed on key points for deep tissue relaxation.</p>
+                                        </div>
+                                    </div>
+                                    <div class="pl-9 sm:pl-0">
+                                        <span class="text-lg font-bold text-text-main dark:text-white">ksh1400</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </section>
+                        
+                        <!-- 2. Select Date & Time (Combined into one visual block for better UX) -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <!-- Calendar -->
+                            <section class="flex flex-col gap-4">
+                                <h2 class="text-text-main dark:text-white text-2xl font-bold leading-tight mb-1 flex items-center gap-3">
+                                    <span class="material-symbols-outlined text-primary">calendar_month</span>
                                     Select Date
                                 </h2>
-<div class="bg-surface-light dark:bg-surface-dark rounded-xl p-6 shadow-[0_4px_20px_rgba(0,0,0,0.03)] dark:shadow-none border border-transparent dark:border-[#2a3830]">
-<div class="flex items-center justify-between mb-6">
-<h3 class="font-bold text-lg dark:text-white">Feburuary 2026</h3>
-<div class="flex gap-2">
-<button class="p-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full transition-colors">
-<span class="material-symbols-outlined text-gray-500 dark:text-gray-400">chevron_left</span>
-</button>
-<button class="p-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full transition-colors">
-<span class="material-symbols-outlined text-gray-500 dark:text-gray-400">chevron_right</span>
-</button>
-</div>
-</div>
-<div class="grid grid-cols-7 gap-1 text-center text-sm mb-2">
-<span class="text-text-muted font-medium py-2">Su</span>
-<span class="text-text-muted font-medium py-2">Mo</span>
-<span class="text-text-muted font-medium py-2">Tu</span>
-<span class="text-text-muted font-medium py-2">We</span>
-<span class="text-text-muted font-medium py-2">Th</span>
-<span class="text-text-muted font-medium py-2">Fr</span>
-<span class="text-text-muted font-medium py-2">Sa</span>
-</div>
-<div class="grid grid-cols-7 gap-1 text-sm">
-<!-- Previous month padding -->
-<span class="py-3 text-gray-300 dark:text-gray-700">29</span>
-<span class="py-3 text-gray-300 dark:text-gray-700">30</span>
-<!-- Days -->
-<button class="py-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white transition-colors">1</button>
-<button class="py-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white transition-colors">2</button>
-<button class="py-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white transition-colors">3</button>
-<button class="py-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white transition-colors">4</button>
-<button class="py-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white transition-colors">5</button>
-<button class="py-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white transition-colors">6</button>
-<button class="py-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white transition-colors">7</button>
-<button class="py-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white transition-colors">8</button>
-<button class="py-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white transition-colors">9</button>
-<button class="py-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white transition-colors">10</button>
-<button class="py-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white transition-colors">11</button>
-<!-- Selected Day -->
-<button class="py-3 rounded-full bg-primary text-black font-bold shadow-md transform scale-105">12</button>
-<button class="py-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white transition-colors">13</button>
-<button class="py-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white transition-colors">14</button>
-<button class="py-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white transition-colors">15</button>
-<button class="py-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white transition-colors">16</button>
-<button class="py-3 rounded-full text-gray-300 dark:text-gray-700 cursor-not-allowed">17</button> <!-- Disabled Example -->
-</div>
-</div>
-</section>
-<!-- Time Slots -->
-<section class="flex flex-col gap-4">
-<h2 class="text-text-main dark:text-white text-2xl font-bold leading-tight mb-1 flex items-center gap-3">
-<span class="material-symbols-outlined text-primary">schedule</span>
+                                <div class="bg-surface-light dark:bg-surface-dark rounded-xl p-6 shadow-[0_4px_20px_rgba(0,0,0,0.03)] dark:shadow-none border border-transparent dark:border-[#2a3830]">
+                                    <div class="flex items-center justify-between mb-6">
+                                        <h3 class="font-bold text-lg dark:text-white">Feburuary 2026</h3>
+                                        <div class="flex gap-2">
+                                            <button class="p-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full transition-colors">
+                                                <span class="material-symbols-outlined text-gray-500 dark:text-gray-400">chevron_left</span>
+                                            </button>
+                                            <button class="p-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full transition-colors">
+                                                <span class="material-symbols-outlined text-gray-500 dark:text-gray-400">chevron_right</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="grid grid-cols-7 gap-1 text-center text-sm mb-2">
+                                        <span class="text-text-muted font-medium py-2">Su</span>
+                                        <span class="text-text-muted font-medium py-2">Mo</span>
+                                        <span class="text-text-muted font-medium py-2">Tu</span>
+                                        <span class="text-text-muted font-medium py-2">We</span>
+                                        <span class="text-text-muted font-medium py-2">Th</span>
+                                        <span class="text-text-muted font-medium py-2">Fr</span>
+                                        <span class="text-text-muted font-medium py-2">Sa</span>
+                                    </div>
+                                    <div class="grid grid-cols-7 gap-1 text-sm">
+                                        <!-- Previous month padding -->
+                                        <span class="py-3 text-gray-300 dark:text-gray-700">29</span>
+                                        <span class="py-3 text-gray-300 dark:text-gray-700">30</span>
+                                        <!-- Days -->
+                                        <button class="py-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white transition-colors">1</button>
+                                        <button class="py-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white transition-colors">2</button>
+                                        <button class="py-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white transition-colors">3</button>
+                                        <button class="py-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white transition-colors">4</button>
+                                        <button class="py-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white transition-colors">5</button>
+                                        <button class="py-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white transition-colors">6</button>
+                                        <button class="py-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white transition-colors">7</button>
+                                        <button class="py-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white transition-colors">8</button>
+                                        <button class="py-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white transition-colors">9</button>
+                                        <button class="py-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white transition-colors">10</button>
+                                        <button class="py-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white transition-colors">11</button>
+                                        <!-- Selected Day -->
+                                        <button class="py-3 rounded-full bg-primary text-black font-bold shadow-md transform scale-105">12</button>
+                                        <button class="py-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white transition-colors">13</button>
+                                        <button class="py-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white transition-colors">14</button>
+                                        <button class="py-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white transition-colors">15</button>
+                                        <button class="py-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white transition-colors">16</button>
+                                        <button class="py-3 rounded-full text-gray-300 dark:text-gray-700 cursor-not-allowed">17</button> <!-- Disabled Example -->
+                                    </div>
+                                </div>
+                            </section>
+                            
+                            <!-- Time Slots -->
+                            <section class="flex flex-col gap-4">
+                                <h2 class="text-text-main dark:text-white text-2xl font-bold leading-tight mb-1 flex items-center gap-3">
+                                    <span class="material-symbols-outlined text-primary">schedule</span>
                                     Select Time
                                 </h2>
-<div class="bg-surface-light dark:bg-surface-dark rounded-xl p-6 shadow-[0_4px_20px_rgba(0,0,0,0.03)] dark:shadow-none h-full border border-transparent dark:border-[#2a3830]">
-<div class="mb-6">
-<h4 class="text-sm font-semibold text-text-muted uppercase tracking-wider mb-3">Morning</h4>
-<div class="grid grid-cols-3 gap-2">
-<button class="py-2 px-1 text-sm border border-gray-200 dark:border-gray-700 rounded-full hover:border-primary hover:text-primary dark:hover:text-primary transition-all text-text-main dark:text-white">09:00 AM</button>
-<button class="py-2 px-1 text-sm border border-transparent bg-primary/20 text-black dark:text-white font-medium rounded-full ring-2 ring-primary ring-offset-1 dark:ring-offset-[#1c2e24]">10:00 AM</button>
-<button class="py-2 px-1 text-sm border border-gray-200 dark:border-gray-700 rounded-full bg-gray-50 dark:bg-[#15231b] text-gray-400 dark:text-gray-600 cursor-not-allowed decoration-slice">11:30 AM</button>
-</div>
-</div>
-<div class="mb-4">
-<h4 class="text-sm font-semibold text-text-muted uppercase tracking-wider mb-3">Afternoon</h4>
-<div class="grid grid-cols-3 gap-2">
-<button class="py-2 px-1 text-sm border border-gray-200 dark:border-gray-700 rounded-full hover:border-primary hover:text-primary dark:hover:text-primary transition-all text-text-main dark:text-white">01:00 PM</button>
-<button class="py-2 px-1 text-sm border border-gray-200 dark:border-gray-700 rounded-full hover:border-primary hover:text-primary dark:hover:text-primary transition-all text-text-main dark:text-white">02:30 PM</button>
-<button class="py-2 px-1 text-sm border border-gray-200 dark:border-gray-700 rounded-full hover:border-primary hover:text-primary dark:hover:text-primary transition-all text-text-main dark:text-white">04:00 PM</button>
-<button class="py-2 px-1 text-sm border border-gray-200 dark:border-gray-700 rounded-full hover:border-primary hover:text-primary dark:hover:text-primary transition-all text-text-main dark:text-white">05:15 PM</button>
-</div>
-</div>
-<!-- Optional Staff Selection -->
-<div class="mt-8 pt-6 border-t border-gray-100 dark:border-gray-800">
-<label class="block text-sm font-medium text-text-main dark:text-white mb-2" for="staff">Staff Preference (Optional)</label>
-<select class="w-full rounded-lg border-gray-200 dark:border-gray-700 bg-white dark:bg-[#15231b] text-text-main dark:text-white py-2.5 px-3 focus:ring-primary focus:border-primary text-sm shadow-sm" id="staff">
-<option>Any Available Professional</option>
-<option>Sarah Martin</option>
-<option>Mary Mungai</option>
-</select>
-</div>
-</div>
-</section>
-</div>
-</div>
-<!-- Right Column: Sticky Booking Summary -->
-<div class="lg:col-span-4">
-<div class="sticky top-24 flex flex-col gap-6">
-<div class="bg-surface-light dark:bg-surface-dark rounded-2xl p-6 shadow-[0_4px_30px_rgba(0,0,0,0.06)] dark:shadow-none border border-transparent dark:border-[#2a3830]">
-<h3 class="text-xl font-bold text-text-main dark:text-white mb-6 border-b border-gray-100 dark:border-gray-800 pb-4">Your Booking</h3>
-<div class="flex flex-col gap-5">
-<div class="flex gap-4">
-<div class="w-12 h-12 rounded-lg bg-gray-100 dark:bg-[#15231b] flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-text-muted">spa</span>
-</div>
-<div>
-<p class="text-xs text-text-muted font-medium uppercase tracking-wider">Service</p>
-<p class="text-text-main dark:text-white font-bold leading-tight mt-0.5">Swedish Massage</p>
-<p class="text-sm text-text-muted mt-0.5">60 Minutes</p>
-</div>
-</div>
-<div class="flex gap-4">
-<div class="w-12 h-12 rounded-lg bg-gray-100 dark:bg-[#15231b] flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-text-muted">event</span>
-</div>
-<div>
-<p class="text-xs text-text-muted font-medium uppercase tracking-wider">Date &amp; Time</p>
-<p class="text-text-main dark:text-white font-bold leading-tight mt-0.5">Feburuary 12, 2026</p>
-<p class="text-sm text-text-muted mt-0.5">10:00 AM</p>
-</div>
-</div>
-<div class="h-px bg-gray-100 dark:bg-gray-800 my-2"></div>
-<div class="flex justify-between items-end">
-<span class="text-text-muted font-medium">Total</span>
-<span class="text-2xl font-black text-text-main dark:text-white tracking-tight">ksh8000</span>
-</div>
-</div>
-<button class="w-full mt-8 bg-primary hover:bg-green-400 text-black font-bold py-3.5 px-6 rounded-xl transition-colors shadow-lg shadow-green-500/20 flex items-center justify-center gap-2">
-<span>Continue</span>
-<span class="material-symbols-outlined text-sm">arrow_forward</span>
-</button>
-<p class="text-center text-xs text-text-muted mt-4">You won't be charged yet.</p>
-</div>
-<!-- Support / Help Card -->
-<div class="bg-primary/10 rounded-xl p-5 flex items-center gap-4 border border-primary/20">
-<div class="bg-surface-light dark:bg-surface-dark p-2 rounded-full text-primary shrink-0">
-<span class="material-symbols-outlined">support_agent</span>
-</div>
-<div>
-<p class="text-sm font-bold text-text-main dark:text-white">Need help booking?</p>
-<p class="text-xs text-text-muted mt-0.5">Call us at (555) 123-4567</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</body></html>
+                                <div class="bg-surface-light dark:bg-surface-dark rounded-xl p-6 shadow-[0_4px_20px_rgba(0,0,0,0.03)] dark:shadow-none h-full border border-transparent dark:border-[#2a3830]">
+                                    <div class="mb-6">
+                                        <h4 class="text-sm font-semibold text-text-muted uppercase tracking-wider mb-3">Morning</h4>
+                                        <div class="grid grid-cols-3 gap-2">
+                                            <button class="py-2 px-1 text-sm border border-gray-200 dark:border-gray-700 rounded-full hover:border-primary hover:text-primary dark:hover:text-primary transition-all text-text-main dark:text-white">09:00 AM</button>
+                                            <button class="py-2 px-1 text-sm border border-transparent bg-primary/20 text-black dark:text-white font-medium rounded-full ring-2 ring-primary ring-offset-1 dark:ring-offset-[#1c2e24]">10:00 AM</button>
+                                            <button class="py-2 px-1 text-sm border border-gray-200 dark:border-gray-700 rounded-full bg-gray-50 dark:bg-[#15231b] text-gray-400 dark:text-gray-600 cursor-not-allowed decoration-slice">11:30 AM</button>
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <h4 class="text-sm font-semibold text-text-muted uppercase tracking-wider mb-3">Afternoon</h4>
+                                        <div class="grid grid-cols-3 gap-2">
+                                            <button class="py-2 px-1 text-sm border border-gray-200 dark:border-gray-700 rounded-full hover:border-primary hover:text-primary dark:hover:text-primary transition-all text-text-main dark:text-white">01:00 PM</button>
+                                            <button class="py-2 px-1 text-sm border border-gray-200 dark:border-gray-700 rounded-full hover:border-primary hover:text-primary dark:hover:text-primary transition-all text-text-main dark:text-white">02:30 PM</button>
+                                            <button class="py-2 px-1 text-sm border border-gray-200 dark:border-gray-700 rounded-full hover:border-primary hover:text-primary dark:hover:text-primary transition-all text-text-main dark:text-white">04:00 PM</button>
+                                            <button class="py-2 px-1 text-sm border border-gray-200 dark:border-gray-700 rounded-full hover:border-primary hover:text-primary dark:hover:text-primary transition-all text-text-main dark:text-white">05:15 PM</button>
+                                        </div>
+                                    </div>
+                                    <!-- Optional Staff Selection -->
+                                    <div class="mt-8 pt-6 border-t border-gray-100 dark:border-gray-800">
+                                        <label class="block text-sm font-medium text-text-main dark:text-white mb-2" for="staff">Staff Preference (Optional)</label>
+                                        <select class="w-full rounded-lg border-gray-200 dark:border-gray-700 bg-white dark:bg-[#15231b] text-text-main dark:text-white py-2.5 px-3 focus:ring-primary focus:border-primary text-sm shadow-sm" id="staff">
+                                            <option>Any Available Professional</option>
+                                            <option>Sarah Martin</option>
+                                            <option>Mary Mungai</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column: Sticky Booking Summary -->
+                    <div class="lg:col-span-4">
+                        <div class="sticky top-24 flex flex-col gap-6">
+                            <div class="bg-surface-light dark:bg-surface-dark rounded-2xl p-6 shadow-[0_4px_30px_rgba(0,0,0,0.06)] dark:shadow-none border border-transparent dark:border-[#2a3830]">
+                                <h3 class="text-xl font-bold text-text-main dark:text-white mb-6 border-b border-gray-100 dark:border-gray-800 pb-4">Your Booking</h3>
+                                <div class="flex flex-col gap-5">
+                                    <div class="flex gap-4">
+                                        <div class="w-12 h-12 rounded-lg bg-gray-100 dark:bg-[#15231b] flex items-center justify-center shrink-0">
+                                            <span class="material-symbols-outlined text-text-muted">spa</span>
+                                        </div>
+                                        <div>
+                                            <p class="text-xs text-text-muted font-medium uppercase tracking-wider">Service</p>
+                                            <p class="text-text-main dark:text-white font-bold leading-tight mt-0.5">Swedish Massage</p>
+                                            <p class="text-sm text-text-muted mt-0.5">60 Minutes</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-4">
+                                        <div class="w-12 h-12 rounded-lg bg-gray-100 dark:bg-[#15231b] flex items-center justify-center shrink-0">
+                                            <span class="material-symbols-outlined text-text-muted">event</span>
+                                        </div>
+                                        <div>
+                                            <p class="text-xs text-text-muted font-medium uppercase tracking-wider">Date &amp; Time</p>
+                                            <p class="text-text-main dark:text-white font-bold leading-tight mt-0.5">Feburuary 12, 2026</p>
+                                            <p class="text-sm text-text-muted mt-0.5">10:00 AM</p>
+                                        </div>
+                                    </div>
+                                    <div class="h-px bg-gray-100 dark:bg-gray-800 my-2"></div>
+                                    <div class="flex justify-between items-end">
+                                        <span class="text-text-muted font-medium">Total</span>
+                                        <span class="text-2xl font-black text-text-main dark:text-white tracking-tight">ksh8000</span>
+                                    </div>
+                                </div>
+                                <button class="w-full mt-8 bg-primary hover:bg-green-400 text-black font-bold py-3.5 px-6 rounded-xl transition-colors shadow-lg shadow-green-500/20 flex items-center justify-center gap-2">
+                                    <span>Continue</span>
+                                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                </button>
+                                <p class="text-center text-xs text-text-muted mt-4">You won't be charged yet.</p>
+                            </div>
+                            
+                            <!-- Support / Help Card -->
+                            <div class="bg-primary/10 rounded-xl p-5 flex items-center gap-4 border border-primary/20">
+                                <div class="bg-surface-light dark:bg-surface-dark p-2 rounded-full text-primary shrink-0">
+                                    <span class="material-symbols-outlined">support_agent</span>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-bold text-text-main dark:text-white">Need help booking?</p>
+                                    <p class="text-xs text-text-muted mt-0.5">Call us at (555) 123-4567</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
