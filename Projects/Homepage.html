@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Touch Spa - Home</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec6d",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#102218",
+                        "text-main": "#111814",
+                        "text-muted": "#618972",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem", 
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for horizontal scrolling if needed */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-main dark:text-white antialiased transition-colors duration-200">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Navigation -->
+<header class="sticky top-0 z-50 w-full bg-white/90 dark:bg-[#102218]/90 backdrop-blur-md border-b border-[#f0f4f2] dark:border-[#1a2e22]">
+<div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+<div class="flex items-center gap-3">
+<div class="text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">spa</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight text-text-main dark:text-white">Touch Spa</h2>
+</div>
+<nav class="hidden md:flex flex-1 items-center justify-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors text-text-main dark:text-white" href="#">Home</a>
+<a class="text-sm font-medium hover:text-primary transition-colors text-text-main dark:text-white" href="#">Services</a>
+<a class="text-sm font-medium hover:text-primary transition-colors text-text-main dark:text-white" href="#">Become a Pro</a>
+</nav>
+<div class="flex items-center gap-3">
+<button class="hidden sm:flex h-10 items-center justify-center rounded-xl bg-transparent px-4 text-sm font-bold text-text-main hover:bg-gray-100 dark:text-white dark:hover:bg-white/10 transition-colors">
+                        Log In
+                    </button>
+<button class="flex h-10 items-center justify-center rounded-xl bg-primary px-5 text-sm font-bold text-[#111814] shadow-sm hover:bg-[#0fd660] transition-colors">
+                        Sign Up
+                    </button>
+<!-- Mobile Menu Icon -->
+<button class="flex md:hidden items-center justify-center p-2 text-text-main dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<div class="relative w-full">
+<div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
+<div class="relative overflow-hidden rounded-3xl bg-cover bg-center shadow-lg h-[560px]" data-alt="Calm spa interior with plants and soft lighting" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuD-9e1OdiIoDrQwk4aevihyjwIKZS0xT-WJam0Gqmt8BJtUzSait4h227NrcQ5EI-wmQ9DPAtXcLnPJQP2tsCJojashCPSMZz1sTRX4gAWrRdnj6ilAbI1S7HksON76lqLlTAhXIM_8HCS-_LjppbUvkFdTUMdTQtw_l9JN9TTgnk7DhSfFRzP_iXAm3EcWUTOpnKFAzZxAHpbh9DWtA4nyHkEH6E4F-r9E31tXr9iw5LYSws6B_AmCaAOgpYYp1X1D7kI9CmytAJI');">
+<div class="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
+<h1 class="max-w-4xl text-4xl font-black leading-tight tracking-tight text-white sm:text-5xl md:text-6xl mb-6">
+                            Relaxation, Delivered to You
+                        </h1>
+<p class="max-w-2xl text-lg font-medium text-white/90 mb-10">
+                            Find peace with the best massage, barber, and spa services near you. Book top-rated professionals instantly.
+                        </p>
+<!-- Enhanced Search Bar -->
+<div class="w-full max-w-3xl rounded-2xl bg-white p-2 shadow-xl dark:bg-[#1a2e22]">
+<form class="flex flex-col sm:flex-row items-center gap-2">
+<div class="flex-1 w-full relative group">
+<div class="absolute left-4 top-1/2 -translate-y-1/2 text-text-muted">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="h-12 w-full rounded-xl border-0 bg-transparent py-0 pl-12 pr-4 text-text-main placeholder:text-text-muted/70 focus:ring-2 focus:ring-primary dark:text-white sm:h-14" placeholder="Service, Salon, or Stylist" type="text"/>
+</div>
+<div class="hidden sm:block w-px h-8 bg-gray-200 dark:bg-gray-700"></div>
+<div class="flex-1 w-full relative">
+<div class="absolute left-4 top-1/2 -translate-y-1/2 text-text-muted">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<input class="h-12 w-full rounded-xl border-0 bg-transparent py-0 pl-12 pr-4 text-text-main placeholder:text-text-muted/70 focus:ring-2 focus:ring-primary dark:text-white sm:h-14" placeholder="Location" type="text"/>
+</div>
+<button class="w-full sm:w-auto h-12 sm:h-14 bg-primary rounded-xl px-8 text-base font-bold text-[#111814] hover:bg-[#0fd660] transition-colors flex items-center justify-center gap-2" type="button">
+<span>Search</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Categories Section -->
+<div class="w-full py-8">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-2xl font-bold tracking-tight text-text-main dark:text-white">Browse by Category</h2>
+<a class="text-sm font-bold text-primary hover:text-[#0fd660] flex items-center gap-1" href="#">
+                        View All <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-6">
+<!-- Category Item 1 -->
+<a class="group flex flex-col gap-3" href="#">
+<div class="aspect-square w-full overflow-hidden rounded-2xl bg-gray-100 shadow-sm transition-transform duration-300 group-hover:-translate-y-1 group-hover:shadow-md dark:bg-white/5">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Close up of hands giving a back massage" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDTIxSgiVpSIdy6Lvv1MfJqjGQbjZK3vMBEdcREL48otFd8HvEgOiPYgDcerjDkRgvJwJV6d7OpXF12v76tKWdd4ZJfwKszSlz0fJsMMuOO99NnosNViZddL4L8-tmPiqVv9AWBOj8paQ2nJw65PJTIEAhfQpAFNGRIy8VkV4k7wbI8Qewe4Sj6evIaEGgf4hmlriHFvzUraqOq4b_UgTNItNyd2KctG1OoVpLd44vN5nUxmtOHjM2JodD-iHfqOiNTscKto-PdAaA');"></div>
+</div>
+<p class="text-center font-bold text-text-main group-hover:text-primary dark:text-white">Massage</p>
+</a>
+<!-- Category Item 2 -->
+<a class="group flex flex-col gap-3" href="#">
+<div class="aspect-square w-full overflow-hidden rounded-2xl bg-gray-100 shadow-sm transition-transform duration-300 group-hover:-translate-y-1 group-hover:shadow-md dark:bg-white/5">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Barber cutting hair in a modern shop" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDcqcygFYcNKB2S-XWVrgOIKB0zTkzyTx_c0HOptoppucQTEd0eVOqe9kEPq1Ynm5t0Y-UHEv6N5loZnFv-nCxFh_ALZGc8EtlQzAZOvIQ2zITIu1zppddOnZYQzzqmC55j6uIRC0utE5KUoAZDcMWmIQVVqym82of8c66VQpDqHowMAK1T7dIJ0lDmM4wYYeCE5FeACiiGKPaZlJCshLriIou7VK0SyP6w_fPIFr8fJOo5k5VtLZdvN_YcMAR4H9Q27ka4wwjM4cs');"></div>
+</div>
+<p class="text-center font-bold text-text-main group-hover:text-primary dark:text-white">Barber</p>
+</a>
+<!-- Category Item 3 -->
+<a class="group flex flex-col gap-3" href="#">
+<div class="aspect-square w-full overflow-hidden rounded-2xl bg-gray-100 shadow-sm transition-transform duration-300 group-hover:-translate-y-1 group-hover:shadow-md dark:bg-white/5">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Fingers with polished nails holding a flower" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCbaF6t23ryRdzwo-cRGzebq_8oSm2vPSxQp-BuXOYEnbeglEmhmgyvIF-oZVBpdx_-JoboEdA5ND-4tdCL1y0umDWA-HTxkXUFNFdezqmbkUA9ThfG9Gbb1jsevVfkHRg6AX_lW1qICSiUTXFah3ZvIuNc6X1hcfytBCAze8tbcNfnd45GnXwPMg3fWk8IIi52F-b2zbWDwZFd9KrKuPqiuute6PQi46jmTHgUjmsUB5DT2BH6usTqfjUXCXpVeL2IAiy5cKrqog8');"></div>
+</div>
+<p class="text-center font-bold text-text-main group-hover:text-primary dark:text-white">Nails</p>
+</a>
+<!-- Category Item 4 -->
+<a class="group flex flex-col gap-3" href="#">
+<div class="aspect-square w-full overflow-hidden rounded-2xl bg-gray-100 shadow-sm transition-transform duration-300 group-hover:-translate-y-1 group-hover:shadow-md dark:bg-white/5">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Woman receiving a relaxing facial treatment" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCR7QhAcmxrFR5ehwQ48TFhT2XByKGgUXr1mu2UTJ-eW-Hjr5vtfr1dQFSBJM_DrLA92fjLmfZbJa_6FjRVkLWH0Dm5RsjAvyqtdFHRqqwEN5A-_XR63E2mi0lXGsWDOypowd0rlwuMa0vpFSOvj5rpVon2kqC0t1AqzmVjvw3HYLIiYiA6xbkCQ8Ig-U0cvks7IqQ7MVy7x49tovn0Y6Xn5yjTWg4-TIH4bRdZLWIUHaM0tBiAkRmEsf4GixZC3g51jv1C0L9cuhU');"></div>
+</div>
+<p class="text-center font-bold text-text-main group-hover:text-primary dark:text-white">Facial</p>
+</a>
+<!-- Category Item 5 -->
+<a class="group flex flex-col gap-3" href="#">
+<div class="aspect-square w-full overflow-hidden rounded-2xl bg-gray-100 shadow-sm transition-transform duration-300 group-hover:-translate-y-1 group-hover:shadow-md dark:bg-white/5">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Professional waxing service setup" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCzJY7ndNppr-xUdO0s2WhSSjdFHk6I4Jmjmw-jh_9ChsTcoMU1vzyOfZUch0gi9cfO4IocnUXhrVoYBRv5TrVvSbLwyovNETM3ZSD-qAeJaB6u22ksPNb1Ut4paCIe9u7S4Y0lPlPv9Wl5qLTRTkq99HX0mWjLUtgktaKCHN9F8KvSpE02xcc4O6osIHhTtsiyyGSuJ_8EYwP8YO8e7PK0VtaQmBstYF-ePoq1GuWqatLbBfX4iFGRqxc0ANvZojR589ROU_MzfA4');"></div>
+</div>
+<p class="text-center font-bold text-text-main group-hover:text-primary dark:text-white">Waxing</p>
+</a>
+<!-- Category Item 6 -->
+<a class="group flex flex-col gap-3" href="#">
+<div class="aspect-square w-full overflow-hidden rounded-2xl bg-gray-100 shadow-sm transition-transform duration-300 group-hover:-translate-y-1 group-hover:shadow-md dark:bg-white/5">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="A cozy living room setting for home visit services" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCrbED7iKUiaojFWU_IX9MvLxyAyprPmXV3P_DkYDKKFTmY-pO-xC3EyKMNWmSr8za0brFUh76mGNzMf7j2j1wgQKa0PlSSESQNPKEqlCWM5k0G8QFIY6vnXD0zzQwjvObigKbC3OC-i3oT53jtMPz5pAZbJb2haDWG4-n9xfj0pcTH2HftdC6CJXCpq06M95BNunZuuQ96NvFYIKSs0A3qjqM6sNBiZz84xKvoT-3X2s-zv7jbTjGzbRkM813bOedpgOlkXYufMlY');"></div>
+</div>
+<p class="text-center font-bold text-text-main group-hover:text-primary dark:text-white">Home Visit</p>
+</a>
+</div>
+</div>
+</div>
+<!-- Featured Professionals Section -->
+<div class="w-full py-12 bg-white/50 dark:bg-white/5">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between mb-8">
+<div>
+<h2 class="text-2xl font-bold tracking-tight text-text-main dark:text-white">Top Rated Professionals</h2>
+<p class="text-text-muted mt-1">Book the best talent near you</p>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+<!-- Professional Card 1 -->
+<div class="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm transition-all hover:shadow-md dark:bg-[#1a2e22]">
+<div class="relative h-48 overflow-hidden">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Portrait of a female massage therapist smiling" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCvh7LCGDmhVwUADaYeIDHIcQjQ_J7UXRwvzNmJQhUaBIhtXsOhoc7yij9V8syAFTOkgxhYHpcYffdK7mGdxUVB7Ix5z9Olc--eH3TkZxPULmB2gJSRC1LmJGEtpCdzd26Oy1-ntmz3fQJscH_RHZ24wD-jCpQQGFbZPpN3Z3zOx07wopRwPY7xA6P9lQNTINCbQidgXe4KwlTRUVsLFM3I4U47LHsKxUl1frDPTWUVEyYBbrepN1-1weOgD3kAb6odn9iK6X0AwMA');"></div>
+<div class="absolute right-3 top-3 rounded-lg bg-white/90 px-2 py-1 text-xs font-bold text-text-main backdrop-blur-sm dark:bg-black/60 dark:text-white">
+<span class="material-symbols-outlined align-middle text-sm text-yellow-500" style="font-variation-settings: 'FILL' 1;">star</span> 4.9
+                            </div>
+</div>
+<div class="flex flex-1 flex-col p-4">
+<h3 class="text-lg font-bold text-text-main dark:text-white">Sarah Martin</h3>
+<p class="text-sm text-text-muted"> Nairobi</p>
+<p class="mt-2 flex items-center gap-1 text-sm text-text-muted">
+<span class="material-symbols-outlined text-base">location_on</span> 1.2 miles away
+                            </p>
+<div class="mt-4 flex items-center justify-between border-t border-gray-100 pt-4 dark:border-white/10">
+<span class="font-bold text-text-main dark:text-white">ksh850<span class="text-xs font-normal text-text-muted">/hr</span></span>
+<button class="rounded-lg bg-primary/20 px-3 py-1.5 text-sm font-bold text-[#0e7a3a] hover:bg-primary hover:text-[#111814] transition-colors dark:text-primary dark:hover:text-[#111814]">
+                                    Book Now
+                                </button>
+</div>
+</div>
+</div>
+<!-- Professional Card 2 -->
+<div class="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm transition-all hover:shadow-md dark:bg-[#1a2e22]">
+<div class="relative h-48 overflow-hidden">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Portrait of a male barber holding tools" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBxTqDCCh9s1D2AEN6Xz4b_S-_wwPAMxafv4RXG5jWOqCqHKtmTeAPhnoekgNFQH4lav5_B0rKu2gly5o1W-qjgImvidI5AHvlFrhSlU06kdVjWTFCNcUGi0B8qF2seEsuhcCmA-imefnKrLuyNYuEC1zYpFfKjzTTqc2lXgwDUvDset1mhmPRr8UADhT4DcB-F16i7L4a1Oawfk0NW-7beZHoYmyGleAu9--o2hZyQz_zEaHIlRtla6BzH0pdto1ZoF7cNsimTw_w');"></div>
+<div class="absolute right-3 top-3 rounded-lg bg-white/90 px-2 py-1 text-xs font-bold text-text-main backdrop-blur-sm dark:bg-black/60 dark:text-white">
+<span class="material-symbols-outlined align-middle text-sm text-yellow-500" style="font-variation-settings: 'FILL' 1;">star</span> 5.0
+                            </div>
+</div>
+<div class="flex flex-1 flex-col p-4">
+<h3 class="text-lg font-bold text-text-main dark:text-white">Michael Njunguna</h3>
+<p class="text-sm text-text-muted">Master Barber</p>
+<p class="mt-2 flex items-center gap-1 text-sm text-text-muted">
+<span class="material-symbols-outlined text-base">location_on</span> 3.5 miles away
+                            </p>
+<div class="mt-4 flex items-center justify-between border-t border-gray-100 pt-4 dark:border-white/10">
+<span class="font-bold text-text-main dark:text-white">ksh 2500<span class="text-xs font-normal text-text-muted">/cut</span></span>
+<button class="rounded-lg bg-primary/20 px-3 py-1.5 text-sm font-bold text-[#0e7a3a] hover:bg-primary hover:text-[#111814] transition-colors dark:text-primary dark:hover:text-[#111814]">
+                                    Book Now
+                                </button>
+</div>
+</div>
+</div>
+<!-- Professional Card 3 -->
+<div class="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm transition-all hover:shadow-md dark:bg-[#1a2e22]">
+<div class="relative h-48 overflow-hidden">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Relaxing spa room with candles and towels" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD-oI943f4CrIOMhu5FS_siYmKo9jPDK1tF2mDDYyCx3MDYbn0VCV3A62mRhapsNn0S5VaG4BqmTe3KH5KbBs3PUfifmVB9eJbr9b_LVXxc6nefwl3tofw0Vj7lDpMfFWNZwFNggvKaU-m9c5Oi-U2wJL1flT9a_o21_QqPHg1amTfK9ylOIDkSq6sAwOrnZ8CstqzChwypQ2jITxxzcDK9ukAETxEXtrUh5FU8Y-UtmiLv0kw9daQTOPRmI4XfgIcQZYyNk0ZkyvY');"></div>
+<div class="absolute right-3 top-3 rounded-lg bg-white/90 px-2 py-1 text-xs font-bold text-text-main backdrop-blur-sm dark:bg-black/60 dark:text-white">
+<span class="material-symbols-outlined align-middle text-sm text-yellow-500" style="font-variation-settings: 'FILL' 1;">star</span> 4.8
+                            </div>
+</div>
+<div class="flex flex-1 flex-col p-4">
+<h3 class="text-lg font-bold text-text-main dark:text-white">Serenity Spa</h3>
+<p class="text-sm text-text-muted">Full Service Spa</p>
+<p class="mt-2 flex items-center gap-1 text-sm text-text-muted">
+<span class="material-symbols-outlined text-base">location_on</span> 0.8 miles away
+                            </p>
+<div class="mt-4 flex items-center justify-between border-t border-gray-100 pt-4 dark:border-white/10">
+<span class="font-bold text-text-main dark:text-white">$$$</span>
+<button class="rounded-lg bg-primary/20 px-3 py-1.5 text-sm font-bold text-[#0e7a3a] hover:bg-primary hover:text-[#111814] transition-colors dark:text-primary dark:hover:text-[#111814]">
+                                    Book Now
+                                </button>
+</div>
+</div>
+</div>
+<!-- Professional Card 4 -->
+<div class="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm transition-all hover:shadow-md dark:bg-[#1a2e22]">
+<div class="relative h-48 overflow-hidden">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Aesthetician applying facial mask to client" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCp7gzx0NS9YAdpH4Tyc9rWP7ldRbXIbHica_X0eYnJygfv88igUiWwCPwEj8zynPAIwCRqaQbK9T2kNBO4cMciXFanONDdMY92uMfHVQ6OPID_Lz0xZkce-urWjBhx-tF4XWQwbksI125MYvyDXTmm3BSjeq8GI38pn3H2KWjGiVlgAvoFx1RZJTcHRz7bLLmAPjiFaqd4lW_Z6rhv3fufd7uZt4piWmazED_bTdqa_7VrOiLlXm2EC3gxlBYw6AUoCCyNJClmGV8');"></div>
+<div class="absolute right-3 top-3 rounded-lg bg-white/90 px-2 py-1 text-xs font-bold text-text-main backdrop-blur-sm dark:bg-black/60 dark:text-white">
+<span class="material-symbols-outlined align-middle text-sm text-yellow-500" style="font-variation-settings: 'FILL' 1;">star</span> 4.9
+                            </div>
+</div>
+<div class="flex flex-1 flex-col p-4">
+<h3 class="text-lg font-bold text-text-main dark:text-white">Glow Studio</h3>
+<p class="text-sm text-text-muted">Facials &amp; Peels</p>
+<p class="mt-2 flex items-center gap-1 text-sm text-text-muted">
+<span class="material-symbols-outlined text-base">location_on</span> 5.0 miles away
+                            </p>
+<div class="mt-4 flex items-center justify-between border-t border-gray-100 pt-4 dark:border-white/10">
+<span class="font-bold text-text-main dark:text-white">$$</span>
+<button class="rounded-lg bg-primary/20 px-3 py-1.5 text-sm font-bold text-[#0e7a3a] hover:bg-primary hover:text-[#111814] transition-colors dark:text-primary dark:hover:text-[#111814]">
+                                    Book Now
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Promotional Banner -->
+<div class="w-full py-12">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="relative overflow-hidden rounded-3xl bg-[#dbe6e0] dark:bg-[#1a2e22] px-6 py-12 sm:px-12 lg:px-16">
+<!-- Background Pattern Abstract -->
+<div class="absolute right-0 top-0 h-full w-1/2 opacity-10 dark:opacity-5" style="background-image: radial-gradient(circle at center, #13ec6d 0%, transparent 70%);">
+</div>
+<div class="relative z-10 flex flex-col items-center gap-6 text-center sm:flex-row sm:text-left sm:justify-between">
+<div class="max-w-xl">
+<div class="mb-4 inline-flex items-center rounded-full bg-white px-3 py-1 text-xs font-bold text-text-main shadow-sm dark:bg-white/10 dark:text-white">
+<span class="mr-2 text-primary">●</span> Limited Time Offer
+                            </div>
+<h2 class="text-3xl font-black tracking-tight text-text-main dark:text-white sm:text-4xl">
+                                New here? Save 15% on your first home visit.
+                            </h2>
+<p class="mt-4 text-lg text-text-muted dark:text-gray-300">
+                                Experience luxury without leaving your doorstep. Use code <span class="font-mono font-bold text-text-main dark:text-white">TOUCH15</span> at checkout.
+                            </p>
+</div>
+<div class="flex shrink-0">
+<button class="flex h-12 min-w-[160px] items-center justify-center rounded-xl bg-primary px-8 text-base font-bold text-[#111814] shadow-lg shadow-primary/25 hover:scale-105 hover:bg-[#0fd660] transition-all">
+                                Claim Offer
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="mt-auto border-t border-[#f0f4f2] bg-white pt-16 pb-8 dark:border-[#1a2e22] dark:bg-[#102218]">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-2 gap-8 md:grid-cols-4 lg:gap-12">
+<div class="col-span-2 lg:col-span-1">
+<div class="flex items-center gap-2 text-text-main dark:text-white mb-4">
+<span class="material-symbols-outlined text-3xl text-primary" style="font-variation-settings: 'FILL' 1;">spa</span>
+<span class="text-xl font-bold">Touch Spa</span>
+</div>
+<p class="text-sm text-text-muted mb-6 max-w-xs">
+                            The easiest way to book wellness and beauty professionals near you. Relax, reset, and rejuvenate.
+                        </p>
+<div class="flex gap-4">
+<a class="text-text-muted hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-text-muted hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">photo_camera</span></a>
+<a class="text-text-muted hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+<div>
+<h3 class="text-sm font-bold uppercase tracking-wider text-text-main dark:text-white mb-4">Company</h3>
+<ul class="flex flex-col gap-3">
+<li><a class="text-sm text-text-muted hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="text-sm text-text-muted hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="text-sm text-text-muted hover:text-primary transition-colors" href="#">Blog</a></li>
+<li><a class="text-sm text-text-muted hover:text-primary transition-colors" href="#">Press</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-sm font-bold uppercase tracking-wider text-text-main dark:text-white mb-4">Services</h3>
+<ul class="flex flex-col gap-3">
+<li><a class="text-sm text-text-muted hover:text-primary transition-colors" href="#">Massage</a></li>
+<li><a class="text-sm text-text-muted hover:text-primary transition-colors" href="#">Barber</a></li>
+<li><a class="text-sm text-text-muted hover:text-primary transition-colors" href="#">Nails</a></li>
+<li><a class="text-sm text-text-muted hover:text-primary transition-colors" href="#">Facials</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-sm font-bold uppercase tracking-wider text-text-main dark:text-white mb-4">Support</h3>
+<ul class="flex flex-col gap-3">
+<li><a class="text-sm text-text-muted hover:text-primary transition-colors" href="#">Help Center</a></li>
+<li><a class="text-sm text-text-muted hover:text-primary transition-colors" href="#">Safety</a></li>
+<li><a class="text-sm text-text-muted hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-sm text-text-muted hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-12 border-t border-[#f0f4f2] pt-8 dark:border-[#1a2e22]">
+<p class="text-center text-sm text-text-muted">
+                        © 2026 Touch Spa Inc. All rights reserved.
+                    </p>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

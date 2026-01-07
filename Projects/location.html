@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Touch Spa Booking - Choose Location</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec6d",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#102218",
+                        "text-main": "#111814",
+                        "text-secondary": "#618972",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "2xl": "2rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main dark:text-white transition-colors duration-200">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e5ece9] dark:border-b-[#1e3a2b] bg-white dark:bg-[#102218] px-6 lg:px-10 py-4 sticky top-0 z-50">
+<div class="flex items-center gap-4 text-text-main dark:text-white">
+<div class="size-8 text-primary">
+<svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold leading-tight tracking-tight">Touch Spa</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+<nav class="flex items-center gap-9">
+<a class="text-text-main dark:text-white text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-text-main dark:text-white text-sm font-medium hover:text-primary transition-colors" href="#">Treatments</a>
+<a class="text-text-main dark:text-white text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
+<a class="text-text-main dark:text-white text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-6 bg-primary hover:bg-opacity-90 transition-opacity text-text-main text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Log In</span>
+</button>
+</div>
+<!-- Mobile Menu Icon -->
+<button class="md:hidden text-text-main dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<main class="flex-1 flex flex-col items-center w-full px-4 sm:px-6 lg:px-40 py-8 lg:py-12">
+<div class="w-full max-w-[1024px] flex flex-col gap-8 lg:gap-12">
+<!-- Progress Stepper -->
+<nav aria-label="Progress" class="w-full">
+<ol class="flex items-center justify-center flex-wrap gap-2 sm:gap-4 md:gap-8" role="list">
+<!-- Step 1: Location (Active) -->
+<li class="flex items-center gap-2">
+<span class="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-text-main font-bold text-sm">1</span>
+<span class="text-text-main dark:text-white font-bold text-sm sm:text-base">Location</span>
+</li>
+<!-- Separator -->
+<li class="hidden sm:block w-8 h-[1px] bg-gray-300 dark:bg-gray-600"></li>
+<!-- Step 2: Treatment -->
+<li class="flex items-center gap-2 opacity-50">
+<span class="flex h-8 w-8 items-center justify-center rounded-full border border-gray-300 dark:border-gray-600 text-gray-500 dark:text-gray-400 font-medium text-sm">2</span>
+<span class="text-gray-500 dark:text-gray-400 font-medium text-sm sm:text-base hidden sm:block">Treatment</span>
+</li>
+<!-- Separator -->
+<li class="hidden sm:block w-8 h-[1px] bg-gray-300 dark:bg-gray-600 opacity-50"></li>
+<!-- Step 3: Therapist -->
+<li class="flex items-center gap-2 opacity-50">
+<span class="flex h-8 w-8 items-center justify-center rounded-full border border-gray-300 dark:border-gray-600 text-gray-500 dark:text-gray-400 font-medium text-sm">3</span>
+<span class="text-gray-500 dark:text-gray-400 font-medium text-sm sm:text-base hidden sm:block">Therapist</span>
+</li>
+<!-- Separator -->
+<li class="hidden sm:block w-8 h-[1px] bg-gray-300 dark:bg-gray-600 opacity-50"></li>
+<!-- Step 4: Confirmation -->
+<li class="flex items-center gap-2 opacity-50">
+<span class="flex h-8 w-8 items-center justify-center rounded-full border border-gray-300 dark:border-gray-600 text-gray-500 dark:text-gray-400 font-medium text-sm">4</span>
+<span class="text-gray-500 dark:text-gray-400 font-medium text-sm sm:text-base hidden sm:block">Confirmation</span>
+</li>
+</ol>
+</nav>
+<!-- Heading Section -->
+<div class="text-center space-y-3">
+<h1 class="text-3xl md:text-4xl lg:text-5xl font-black leading-tight tracking-tight text-text-main dark:text-white">
+                        Choose Your Sanctuary
+                    </h1>
+<p class="text-text-secondary dark:text-[#A0C4B0] text-base md:text-lg max-w-2xl mx-auto">
+                        Where would you like to relax today? Select a location to view available treatments.
+                    </p>
+</div>
+<!-- Selection Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 w-full">
+<!-- Card 1: In-Spa Experience -->
+<div class="group relative flex flex-col bg-white dark:bg-[#1A2C22] rounded-2xl shadow-sm hover:shadow-xl hover:ring-2 hover:ring-primary transition-all duration-300 cursor-pointer overflow-hidden h-full">
+<div class="relative h-64 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transform group-hover:scale-105 transition-transform duration-500" data-alt="Modern bright spa interior with plants and white decor" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDmS3f_hcSDtPhsXOCDdQSBbz4AUaIK2uS7IDWX-jrz4Ba6ErU5SbbHM0JeGJNrEu0rA6AOfeqP5eQZoN5ahNAiQEwhE465inN4dd2pyZgHKAkXKMk64p3vq1onLNukz7ZvVtnhbpM7XvLmmP2p7jYlyb9JFXnztKNB_An8Sg-lq9iGJKOkqa6xLxLD0eFfxZkwFuVZn5BQ13JhXxyeCnPKWgRadYZoDG_rcPvVh6TJTC6oI_Ud3vNeNda7jpPLssTHmRaw8BbOiAg');">
+</div>
+<div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-300"></div>
+</div>
+<div class="flex flex-col flex-grow p-8 gap-4">
+<div class="flex justify-between items-start">
+<h3 class="text-2xl font-bold text-text-main dark:text-white">In-Spa Experience</h3>
+<span class="material-symbols-outlined text-primary text-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-x-[-10px] group-hover:translate-x-0">
+                                    spa
+                                </span>
+</div>
+<p class="text-text-secondary dark:text-[#A0C4B0] text-base leading-relaxed flex-grow">
+                                Immerse yourself in our tranquil facilities. Enjoy full access to premium amenities including sauna, steam rooms, and relaxation lounges before your treatment.
+                            </p>
+<div class="pt-4">
+<button class="w-full h-12 rounded-xl bg-background-light dark:bg-[#2A4435] group-hover:bg-primary text-text-main font-bold text-sm transition-colors duration-300 flex items-center justify-center gap-2">
+<span>Select Spa Visit</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2: At-Home Concierge -->
+<div class="group relative flex flex-col bg-white dark:bg-[#1A2C22] rounded-2xl shadow-sm hover:shadow-xl hover:ring-2 hover:ring-primary transition-all duration-300 cursor-pointer overflow-hidden h-full">
+<div class="relative h-64 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transform group-hover:scale-105 transition-transform duration-500" data-alt="Relaxing home living room setup with candles and towels" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC2CTR4-YaSplqfG32VilQJV8sOZhkbEST94wI7AnPO5pUIQSPg_8NaruhDo88iR0UL9SBjJEmK-hszo367yoEucd_y8VIA-LDAmRhu9vSFS7ZfPeVrr5kZdX4LQ3YzXCg7n4NBkrrV-ZE5BhXVteFKajBQsY1HizztscEc_tQfbiqs95C-DSyKVUzAthsW7TK3VNAVXionH3RCvEr3-VwCybn3vTVvUNbpmin_OmIr7W9xxuRUkzEMWao61br1TvisoWvwLPF3JK4');">
+</div>
+<div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-300"></div>
+</div>
+<div class="flex flex-col flex-grow p-8 gap-4">
+<div class="flex justify-between items-start">
+<h3 class="text-2xl font-bold text-text-main dark:text-white">At-Home Concierge</h3>
+<span class="material-symbols-outlined text-primary text-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-x-[-10px] group-hover:translate-x-0">
+                                    home_health
+                                </span>
+</div>
+<p class="text-text-secondary dark:text-[#A0C4B0] text-base leading-relaxed flex-grow">
+                                We bring the relaxation to you. Our certified therapists transform your personal space into a private spa haven with professional equipment and organic oils.
+                            </p>
+<div class="pt-4">
+<button class="w-full h-12 rounded-xl bg-background-light dark:bg-[#2A4435] group-hover:bg-primary text-text-main font-bold text-sm transition-colors duration-300 flex items-center justify-center gap-2">
+<span>Select Home Visit</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Helper Text / Links -->
+<div class="flex justify-center pt-4">
+<p class="text-sm text-text-secondary dark:text-gray-400">
+                        Not sure which to choose? <a class="text-primary font-medium hover:underline" href="#">Compare experiences</a>
+</p>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-[#102218] border-t border-[#e5ece9] dark:border-[#1e3a2b] py-8">
+<div class="max-w-[1024px] mx-auto px-6 lg:px-10 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-text-secondary dark:text-gray-400 text-sm">© 2026 Touch Spa. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-text-secondary dark:text-gray-400 hover:text-primary text-sm font-medium transition-colors" href="#">Privacy Policy</a>
+<a class="text-text-secondary dark:text-gray-400 hover:text-primary text-sm font-medium transition-colors" href="#">Terms of Service</a>
+<a class="text-text-secondary dark:text-gray-400 hover:text-primary text-sm font-medium transition-colors" href="#">Help Center</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
